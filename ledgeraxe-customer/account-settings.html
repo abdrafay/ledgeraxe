@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account Settings</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+
+    <nav class="navbar-nav fixed-top p-2 trans-head">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="mr-auto">
+                    <h3>Account Settings</h3>
+                </div>
+                <div class="ml-auto">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <!-- <a onclick="windows.location.href=""" class="btn btn-primary">Close</a> -->
+                    <!-- <a href="index.html" class="btn btn-primary">Close</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main style="margin:80px 0;">
+        <div class="container">
+            <form action="">
+                <div class="cmpny-name-sec">
+                    <div class="col-8">
+                        <h4>Company Name</h4>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Company Logo</label>
+                                </div>
+                                <div class="col-6 p-1">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Company Name</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Legal Name</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="checkbox" class="cbx tbl-filter" name="" id="same-as-compny-name"
+                                        style="display: none;">
+                                    <label for="same-as-compny-name" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                    <label for="same-as-compny-name">Same As Company Name</label>
+                                    <input type="text" class="form-control lgl-name" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Business ID No.</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="number" placeholder="99-1111110" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="compny-type">
+
+                    <div class="col-8">
+                        <h4>Company Type</h4>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Tax form</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <div class="form-group">
+                                    <select name="" id="" class="form-control select2bs4">
+                                        <option value="">Sole Proprietor</option>
+                                        <option value="">Partnership or limited liability company</option>
+                                        <option value="">Small business corporation, two or more owners</option>
+                                        <option value="">Corporation, one or more shareholders</option>
+                                        <option value="">Nonprofit organisation</option>
+                                        <option value="">Limited Liability</option>
+                                        <option value="">Not sure/Other/None</option>
+                                    </select>
+                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Industry</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="compny-address">
+                    <div class="col-8">
+                        <h4>Contact Info</h4>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Company Email</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="email" name="" id="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Customer Facing Email</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Comapany Phone</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row m-0 align-items-center">
+                                <div class="col-6 p-1">
+                                    <label for="">Website</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="url" name="" id="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="compny-address">
+                    <div class="col-8">
+                        <h4>Address</h4>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Company Address</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" placeholder="Street" class="form-control mb-2">
+                                    <input type="text" placeholder="City" class="form-control mb-2">
+                                    <div class="row m-0 align-items-center">
+                                        <div class="col-6 p-0 pr-1">
+                                            <input type="text" placeholder="State" class="form-control">
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <input type="number" placeholder="ZIP" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Customer Facing Address</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="checkbox" class="cbx tbl-filter" name="" id="same-cust-face-addr" style="display: none;">
+                                        <label for="same-cust-face-addr" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path
+                                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                </path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                        </label>
+                                        <label for="same-cust-face-addr">Same As Company Address</label>
+                                    <input type="text" placeholder="Street" class="form-control mb-2">
+                                    <input type="text" placeholder="City" class="form-control mb-2">
+                                    <div class="row m-0 align-items-center">
+                                        <div class="col-6 p-0 pr-1">
+                                            <input type="text" placeholder="State" class="form-control">
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <input type="number" placeholder="ZIP" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="row m-0">
+                                <div class="col-6 p-1">
+                                    <label for="">Legal Address</label>
+                                </div>
+                                <div class="col-6 p-1">
+                                        <input type="checkbox" class="cbx tbl-filter" name="" id="same-lgl-addr" style="display: none;">
+                                        <label for=".same-lgl-addr" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path
+                                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                </path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                        </label>
+                                        <label for="same-lgl-addr">Same As Company Address</label>
+                                    
+                                    <input type="text" placeholder="Street" class="form-control mb-2">
+                                    <input type="text" placeholder="City" class="form-control mb-2">
+                                    <div class="row m-0 align-items-center">
+                                        <div class="col-6 p-0 pr-1">
+                                            <input type="text" placeholder="State" class="form-control">
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <input type="number" placeholder="ZIP" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="col-12">
+        <div class="col-bottom-flex row">
+            <div class="col-md-6 pl-4">
+                &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+            </div>
+            <div class="col-md-6 text-right pr-4">
+                <div class="footer-links">
+                    <a href="">Privacy</a>
+                    <a href="">Security</a>
+                    <a href="">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

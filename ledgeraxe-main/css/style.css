@@ -1,0 +1,476 @@
+.download-as-pdf-btn a {
+	background: linear-gradient(140deg, #3bdcef 0%, #3c9aff 100%)!important;
+	border: none;
+	color: #fff;
+}
+.download-as-pdf-btn a:hover {
+	color: #fff;
+}
+.footer-copyrights a {
+	color: #54ae33!important;
+}
+.actions a[href$='#finish'] {
+	display: none;
+}
+.submit-btn a {
+	background: #6d7f52;
+	display: block;
+	padding: 10px 30px;
+	color: #fff;	
+}
+.wrapper-hide {
+	margin-left: 0!important;
+	z-index: 1!important;
+}
+
+#wrapper {
+	margin-left: 14.9rem;
+	background:#eee;
+	transition: 1s;
+}
+.side-navbar {
+	position: fixed;
+	max-width: 100%;
+	height: 100vh;
+	margin-right: 100px;
+	background: linear-gradient(140deg,  #00a8ba 0%, #54ae33 100%)!important;
+	/*z-index: -1;*/
+	top: 0;
+	box-shadow: 0px 1px 10px 0px;
+}
+.side-bar-img img {
+	width: 140px;
+}
+.side-navbar ul {
+	list-style: none;
+	padding: 40px;
+	margin-top: 100px;
+}
+.side-navbar ul li a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+}
+.nav-toggle-btn i {
+	font-size: 20px;
+	color: #000;
+}
+#learn-and-support-main-section {
+	background:url(../images/background-images/learnandsupport.jpg) center;
+	background-size: cover;
+	padding: 160px 0;
+	color: #fff;
+	margin-top: 50px;
+}
+#learn-and-support-main-section h1 {
+	font-weight: bold;
+}
+#learn-and-support-main-content {
+	background: #eee;
+	padding: 40px 0 60px 0;
+}
+#learn-and-support-main-content .col-md-4 {
+	margin: 10px 0;
+}
+#learn-and-support-main-content .learn-and-support-content-inner {
+	background: #fff;
+	padding: 40px 20px;
+	height: 100%;
+}
+.learn-support-content-img-inner {
+	padding: 10px 0;
+}
+.learn-support-content-img-inner img {
+	width: 64px;
+	height: 100%;
+}
+/*@font-face {font-family: "Geogrotesque"; src: url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.eot"); src: url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.woff") format("woff"), url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6966cc177fccc04acf8c9e8b04a81fe7.svg#Geogrotesque") format("svg"); }
+body {
+	font-family: "Geogrotesque","Calibri","Trebuchet MS",sans-serif !important;
+}*/
+body {
+	overflow-x: hidden;
+}
+#join-with-us-main-bg {
+	padding: 220px 0 190px 0;
+	background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.5)), url(../images/background-images/join-with-us.jpg) center;
+	background-size: cover;
+}
+#join-with-us-main-bg h1 {
+	color: white;
+	font-weight: bold;
+	font-size: 45px;
+	letter-spacing: 4px;
+}
+#footer-2 p {
+	font-size: 16px!important;
+	text-align: left;
+	font-weight: 500!important;
+}
+.bg-dark {
+	background: linear-gradient(90deg,  #00a8ba 0%, #54ae33 100%)!important;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+.dropdown-menu{
+	transition: 2s ease;
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+		display: block;
+		transition: 2s ease;
+		}
+		.dropdown-submenu {
+		position:relative;
+		transition: 2s ease;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		top:0;
+		/*left:-100%;*/
+		left:100%; /* 10rem is the min-width of dropdown-menu */
+		margin-top:-6px;
+		}
+		/* rotate caret on hover */
+		.dropdown-menu > li > a:hover:after {
+		text-decoration: underline;
+		transform: rotate(-90deg);
+		}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.nav-border-top {
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+.dropdown-item {
+	padding: 10px;
+}
+#main-bg-section {
+	background: url(../images/background-images/main1.jpg) right;
+	background-size: cover;
+	padding: 120px 0px 120px;
+/*	height: 600px;*/
+	color: #525252;
+	margin-top: 80px;
+}
+.black-box-div {
+	background: #0b0d0e;
+	color: #eee;
+	letter-spacing: 2px;
+	padding: 30px;
+	font-size: 18px!important;
+}
+.main-heading {
+	font-size: 23px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#main-content-section {
+	padding: 60px 0px 0px 0px;
+}
+.main-content-div {
+	padding: 40px 0px 0px 0px;
+}
+.button-div {
+	padding: 10px 0px;
+}
+.c-btn {
+	background: #1D1F20;
+	color: white;
+	padding: 6px 14px;
+	border-radius: 4px;
+}
+.c-btn:hover {
+	background: #555;
+	color: white;
+	text-decoration: none;
+}
+.content-sec {
+	padding: 40px 0px;
+}
+.c-btn-green {
+	background: #54ae33!important;
+	color: white;
+	padding: 6px 14px;
+	border-radius: 4px;
+}
+.c-btn-green:hover {
+	background: #0089FA;
+	color: white;
+	text-decoration: none;
+}
+.main-all-features-btn {
+	padding: 30px 0px;
+}
+#main-content-bg-section {
+	background: linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.8)),url(../images/background-images/content-bg.jpg) center;
+	background-size: cover;
+	padding: 80px 0px;
+}
+.right-aligned {
+	color: #fff;
+}
+.rating-section {
+	width: 73%;
+}
+.stars i {
+	color: #fff;
+	font-size: 20px;
+	padding-bottom: 30px;
+}
+.checked {
+	color: #54ae33!important;
+}
+#testimonials-section {
+	background: #1D1F20;
+	padding: 40px 0px;
+}
+.inner-testimonials {
+	text-align: center;
+	color: #fff;
+}
+.img-testimonials {
+	padding: 10px;
+}
+.content-testimonials {
+	padding: 10px;
+	font-size: 15px;
+}
+.img-testimonials img {
+	border-radius: 50%;
+}
+#start-plans-pricing-section {
+	padding: 60px 0px;
+	background: #edeef0;
+}
+#video-section {
+	padding: 120px 0px;
+}
+.heading-video-section {
+	padding: 0px 0px 40px 0px;
+}
+.plans-pricing-btn {
+	padding: 15px 0px;
+}
+.footer-upper-cols {
+	padding-bottom: 20px;
+}
+.footer-lower-cols {
+	border-top: 1px solid #eee;
+}
+.inner-footer-col-md-12 {
+	padding: 10px 0px;
+	display: flex;
+	align-items: center;
+}
+.lower-footer-side-links {
+	display: flex;
+	list-style-type: none;
+}
+.lower-footer-side-links a {
+	padding: 0px 10px;
+	color: #fff;
+}
+.footer-side-link-1 {
+	padding-left: 0!important;
+	border-right: 1px solid #eee;
+}
+.footer-upper-cols .col-md-3 {
+	list-style-type: none;
+	color: #fff;
+}
+.footer-upper-cols .col-md-3 a {
+	color: #fff;
+}
+
+.footer-2-links {
+	display: flex;
+	list-style-type: none;	
+	align-items: center;
+	justify-content: flex-end;
+}
+.footer-2-links a {
+	padding: 0px 10px;
+}
+.footer-about-sec {
+	width: 50%;
+}
+#footer-1 {
+	background: #1D1F20;
+	padding: 80px 0px;
+}
+#footer-2 {
+	background: #edeef0;
+	padding: 10px 0px 60px 0px;
+}
+#footer-2 a {
+	color: #262626;
+}
+#footer-2 p {
+	color: #262626;
+}
+.footer-2-link-1 {
+	border-right: 1px solid #262626;
+}
+.footer-2-link-2 {
+	border-right: 1px solid #262626;
+}
+/*=========================================================================================================*/
+#accounting-features {
+	padding: 120px 0px;
+}
+.features-button {
+	padding-top: 50px;
+}
+#cloud-accounting-main-bg-section, #accounting-reports-main-bg-section {
+	background: url(../images/background-images/cloud-accounting.png) center;
+	background-size: cover;
+	padding: 180px 0px;
+	color: white;
+}
+#cloud-accounting-main-bg-section {
+	background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)), url(../images/background-images/cloud-accounting.jpg) center;
+	background-size: cover;
+}
+.cloud-accounting-second-sec {
+	padding: 70px 0px;
+}
+.cloud-accounting-third-sec-heading {
+	padding: 0px 0px 40px 0px;
+}
+.cloud-accounting-content-section ul li {
+	margin-bottom: 10px;	
+}
+#cloud-accounting-third-sec {
+	background: #edeef0;
+	padding: 60px 0px;
+	}
+#cloud-accounting-fourth-sec {
+	padding: 60px 0px;
+}
+#cloud-accounting-fifth-sec {
+	background: #edeef0;
+	padding: 20px 0px;
+}	
+.cloud-accounting-fifth-sec-heading {
+	padding: 10px 0px;
+}
+.plans-pricing-btn-div {
+	padding: 30px 0px;	
+}
+#cloud-accounting-sixth-sec {
+	padding: 80px 0px;
+}
+.cloud-sixth-sec-heading {
+	padding: 20px 0px;
+}
+/*======================================================================================*/
+.small-resources-top-sec-heading {
+	border-bottom: 1px solid #eee;
+	padding: 10px 0px;
+}
+#small-resources-top-sec a {
+	color: black;
+}
+#small-resources-top-sec {
+	padding: 90px 0px 20px 0px;
+}
+#small-resources-second-sec {
+	padding: 60px 0px;
+	background: #edeef0;
+}
+.inner-small-resources-cols {
+	background: #fff;
+	padding: 10px;
+}
+.inner-small-resources-cols:hover {
+	background: #b5b5b5;
+}
+#small-resources-second-sec a {
+	text-decoration: none;
+}
+/*==========================================================================================*/
+#accountants-main-bg {
+	background: url(../images/background-images/back2.png) center;
+	background-size: cover;
+	padding: 100px 0px;
+	color: #fff;
+}
+#accountants-second-sec {
+	padding: 20px 0px;
+	background: #edeef0;
+
+}
+#accountants-second-sec h6 {
+	font-size: 15px;
+}
+#accountants-second-sec p {
+	font-size: 15px;
+}
+#accountants-third-sec {
+	padding: 40px 0px;
+}
+#accountant-fourth-sec {
+	background: #fff;
+	padding: 80px 0px;
+}
+#accountant-fifth-sec {
+	background: #393a3d;
+	color: #fff;
+	padding: 40px;
+}
+.display-flex {
+	display: flex;
+	justify-content: center;
+}
+#accountant-sixth-sec {
+	padding: 40px 0px 70px 0px;
+	background: #edeef0;
+}
+#accountant-sixth-sec .form-group .form-control {
+	border-radius: 0;	
+}
+#accountant-sixth-sec form i {
+	color: red;
+	font-size: 12px;
+}
+#accountant-seventh-sec {
+	padding: 20px 0px;
+}
+.account-fourth-sec-heading {
+	padding: 20px 0px;
+}
+.img-testimonials img {
+	max-width: 180px;
+}
+.inner-accountant-cols, .img-inner-cloud-accounting, .img-inner-accounting-features {
+	height: 100%;
+	padding: 10px 0px;
+}
+.img-accountant-cols img, .img-inner-cloud-accounting img, .img-inner-accounting-features img {
+	width: 64px;
+}
+.img-inner-small-resources-cols {
+	padding: 10px 30px;
+}
+.img-inner-small-resources-cols img {
+	width: 64px;
+}
+.inner-small-resources-cols {
+	height: 100%;
+	padding: 10px;
+}
+.heading-inner-small-resources-cols {
+	color: black;
+}
+.para-inner-small-resources-cols {
+	color: #848383;
+}
+@media screen and (max-width: 768px) {
+	.account-fourth-sec-heading h1 {
+		font-size:30px;
+	}
+	.account-fourth-sec-heading h4 {
+		font-size:18px;
+	}
+}

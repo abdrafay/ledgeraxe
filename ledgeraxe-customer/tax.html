@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tax</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+    <!-- 1 -->
+    <!-- Modal -->
+    <div class="modal fade" id="addtax" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Tax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <h6>What Type Of Tax you wnat to add</h6>
+                    <hr>
+                    <a href="" data-toggle="modal" data-target="#addtax1" data-dismiss="modal">
+                        <div>
+                            <h6>Tax Rate</h6>
+                            <p>Add another tax rate for abc, such as local tax not already included</p>
+                        </div>
+                    </a>
+                    <hr>
+                    <a href="" data-toggle="modal" data-target="#addtax2" data-dismiss="modal">
+                        <div>
+                            <h6>Group Rate</h6>
+                            <p>Combine multiple taxes and make applying them to your transactions easier. All taxes you
+                                include are calculated and charged at once, but we track them separately for you.</p>
+                        </div>
+                    </a>
+                    <hr>
+                    <a href="" data-toggle="modal" data-target="#addtax3" data-dismiss="modal">
+                        <div>
+                            <h6>Custom Tax</h6>
+                            <p>Add a tax agency and a tax percentage, such as an environmental levy, hotel, or petrol
+                                tax.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="addtax1" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Tax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Tax Rate</h6>
+                    <a href="" style="color: blue;" data-toggle="modal" data-dismiss="modal" data-target="#addtax">Change</a>
+                    <hr>
+                    <p>Create a name for your tax rate, and give us a few details about how you want to apply it.</p>
+                    <div class="row m-0">
+                        <div class="col-6">
+                            <label for="">Tax Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="">Description</label>
+                            <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <h6 class="pt-2">Tax Agency</h6>
+                    <p>abc</p>
+                    <div class="sls-pur-chkbox">
+                        <!--  -->
+                        <input type="checkbox" class="cbx tbl-filter" name="" id="sls-chk" style="display: none;">
+                        <label for="sls-chk" class="check">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                <path
+                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                </path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                        </label>
+                        <label for="sls-chk">Sales</label>
+                        <!--  -->
+                        <label for="">Sales Rate</label>
+                        <input type="number" name="" style="width: 30%;" id="" placeholder="%" class="form-control">
+                        <!--  -->
+                        <label for="">Amount</label>
+                        <select name="" class="select2bs4" id="">
+                            <option value="">Liability</option>
+                            <option value="">Expense</option>
+                        </select>
+                        <!--  -->
+                        <label for="">Show tax amount on return line</label>
+                        <select name="" class="select2bs4" id="">
+                            <option value="">Tax collected on sales</option>
+                            <option value="">Adjutments to tax on sales</option>
+                            <option value="">Other Adjustments</option>
+                        </select>
+                        <!--  -->
+                        <label for="">Show net amount on return line</label>
+                        <select name="" id="" class="select2bs4">
+                            <option value="">Total Taxable sales in period, before tax</option>
+                            <option value="">Not Applicable (N/A)</option>
+                        </select>
+                        <!--  -->
+                        <input type="checkbox" class="cbx tbl-filter" name="" id="purc-chk" style="display: none;">
+                        <label for="purc-chk" class="check">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                <path
+                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                </path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                        </label>
+                        <label for="purc-chk">Purchase</label>
+                        <!--  -->
+                        <label for="">Purchase Rate</label>
+                        <input type="number" name="" style="width: 30%;" id="" placeholder="%" class="form-control">
+                        <!--  -->
+                        <label for="">Amount</label>
+                        <select name="" class="select2bs4" id="">
+                            <option value="">Expense</option>
+                        </select>
+                        <!--  -->
+                        <label for="">Show tax amount on return line</label>
+                        <p>Not Applicable</p>
+                        <label for="">Show net amount on return line</label>
+                        <p>Not Applicable</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- Modal -->
+    <div class="modal fade" id="addtax2" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Tax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Group Rate</h6>
+                    <a href="" data-target="#addtax" data-toggle="modal" data-dismiss="modal"
+                        style="color: blue;">Change</a>
+                    <hr>
+                    <p>Give your group rate a name, and select which existing tax rates to include.</p>
+                    <div class="row m-0">
+                        <div class="col-6">
+                            <label for="">Tax Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="">Description</label>
+                            <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="sls-pur-chkbox">
+                        <div class="row m-0">
+                            <div class="col-6">
+                                <label for="">Tax Rate</label>
+                                <select name="" class="select2bs4" id="">
+                                    <option value="" disabled></option>
+                                    <option value="">abc (sales)</option>
+                                    <option value="">abc (purchase)</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="">Applicable On</label>
+                                <select name="" class="select2bs4" id="">
+                                    <option value="">Net Amount</option>
+                                    <option value="">Tax Amount</option>
+                                    <option value="">Net + Tax Amount</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="" class="mt-2 btn btn-secondary" style="color:white">Add Tax Rates</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- Modal -->
+    <div class="modal fade" id="addtax3" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Tax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Custom Tax</h6>
+                    <a href="" style="color: blue;" data-target="#addtax" data-toggle="modal" data-dismiss="modal">Change</a>
+                    <hr>
+                    <p>Create a name for your custome tax rate, and give us a few details about how you track it.</p>
+                    <!--  -->
+                    <label for="">Tax Name</label>
+                    <input type="text" style="width: 60%;" class="form-control">
+                    <label for="">Description</label>
+                    <textarea name="" class="form-control" id=""></textarea>
+                    <label for="">Tax Agency Name</label>
+                    <input type="text" style="width: 60%;" class="form-control">
+                    <label for="">Registration No</label>
+                    <input type="number" style="width: 60%;" class="form-control">
+                    <label for="">Start of tax period</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
+                    <label for="">Filing Frequency</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">Monthly</option>
+                        <option value="">Quarterly</option>
+                        <option value="">Half-yearly</option>
+                        <option value="">Yearly</option>
+                    </select>
+                    <label for="">Reporting Method</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">Cash</option>
+                        <option value="">Accrual</option>
+                    </select>
+                    <label for="">Business ID No</label>
+                    <input type="number" style="width: 60%;" class="form-control">
+
+                    <!--  -->
+                    <div class="cust-tax-chkbx">
+                        <div class="pt-2">
+                            <input type="checkbox" class="cbx tbl-filter hide-show-rate" name="" id="cl-sls-rate"
+                                style="display: none;">
+                            <label for="cl-sls-rate" class="check">
+                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                    <path
+                                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                    </path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>
+                            </label>
+                            <label for="cl-sls-rate">This Tax is Collected On Sales</label>
+                            <br>
+                            <!--  -->
+                            <div class="p-2 rate-hide-show hide-show-rate">
+                                <label for="">Sales Rate %</label>
+                                <input type="number" style="width: 40%;" class="form-control">
+                            </div>
+                            <!--  -->
+                        </div>
+                        <div class="pt-2">
+                            <!--  -->
+                            <input type="checkbox" class="cbx tbl-filter chkbox hide-show-pur" name="" id="cl-pur-rate"
+                                style="display: none;">
+                            <label for="cl-pur-rate" class="check">
+                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                    <path
+                                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                    </path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>
+                            </label>
+                            <label for="cl-pur-rate">This Tax is Collected On Purchase</label>
+                            <!--  -->
+                            <!--  -->
+                            <br>
+                            <div class="p-2 rate-hide-show hide-show-pur">
+                                <label for="">Purchase Rate %</label>
+                                <input type="number" style="width: 40%;" class="form-control">
+
+                                <input type="checkbox" class="cbx tbl-filter" name="" id="pur-reclaim"
+                                    style="display: none;">
+                                <label for="pur-reclaim" class="check">
+                                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                        <path
+                                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                        </path>
+                                        <polyline points="1 9 7 14 15 4"></polyline>
+                                    </svg>
+                                </label>
+                                <label for="pur-reclaim">Purchase Tax is reclaimable</label>
+
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="EditTax" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Tax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Edit Tax</h6>
+                    <a href="" style="color: blue;" data-target="#addtax" data-toggle="modal" data-dismiss="modal">Change</a>
+                    <hr>
+                    <p>Create a name for your custome tax rate, and give us a few details about how you track it.</p>
+                    <!--  -->
+                    <label for="">Tax Agency Name</label>
+                    <input type="text" style="width: 60%;" class="form-control">
+                    <label for="">Start of tax period</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
+                    <label for="">Filing Frequency</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">Monthly</option>
+                        <option value="">Quarterly</option>
+                        <option value="">Half-yearly</option>
+                        <option value="">Yearly</option>
+                    </select>
+                    <label for="">Reporting Method</label>
+                    <select name="" id="" class="select2bs4">
+                        <option value="">Cash</option>
+                        <option value="">Accrual</option>
+                    </select>
+                    <label for="">Business ID No</label>
+                    <input type="number" style="width: 60%;" class="form-control">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+     <!-- Modal -->
+     <div class="modal fade" id="filter-mdl" data-backdrop="static" tabindex="-1" role="dialog"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-scrollable" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="staticBackdropLabel">Filter</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                <div class="row p-2 align-items-center">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Tax Period</label>
+                            <select class="form-control select2bs4"
+                                style="width: 100%;">
+                                <option selected="selected">Last 365 Days
+                                </option>
+                                <option>Custom</option>
+                                <option>This Month</option>
+                                <option>This Quarter</option>
+                                <option>This Year</option>
+                                <option>Last Month</option>
+                                <option>Last Quarter</option>
+                                <option>Last Year</option>
+                                <option selected>All Dates</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-12">
+                        <!-- Date range -->
+                        <div class="form-group">
+                            <label>From - To</label>
+                
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </span>
+                                </div>
+                                <input type="text"
+                                    class="form-control float-right"
+                                    id="reservation">
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                    </div>
+                    <div class="col-lg-12 text-left">
+                        <a href="" class="btn btn-secondary">Apply</a>
+                    </div>
+                </div>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--  -->
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                    class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sales.html">Sales</a>
+                            <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                            <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expenses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="expense.html">Expenses</a>
+                            <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tax.html">Taxes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="wrapper">
+      
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="all-tax-display pb-4" style="height: 100%;">
+                    <div class="row m-0">
+                        <div class="mr-auto p-4">
+                            <h1>Tax</h1>
+                        </div>
+                        <div class="ml-auto pt-4">
+                            <div class="row m-0">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Edit abc
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#" data-toggle="modal"
+                                            data-target="#EditTax">Edit Settings</a>
+                                        <a class="dropdown-item" href="#">Edit Rates</a>
+                                    </div>
+                                </div>
+                                <div class="pl-2">
+                                    <a href="" data-toggle="modal" data-target="#addtax" class="btn btn-secondary">Add
+                                        Tax</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tax-display-content">
+                        <div class="row m-0">
+                            <div class="col-md-12 text-center">
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <h3>PRs 0.00</h3>
+                                        <a href="">01/01/2020</a>-<a href="">01/31/2020</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <div class="row m-0 text-center align-items-center">
+                                        <div class="col-md-4">
+                                            <h5>PRs 0.00</h5>
+                                            <a href="">Collected On Sales</a>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                            <h5>PRs 0.00</h5>
+                                            <a href="">Paid On Purchases</a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>PRs 0.00</h5>
+                                            <a href="">Adjutments</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="col-12 pt-4">
+                                <div class="row m-0 align-items-center">
+                                <ul class="nav nav-pills mb-2 align-items-center" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                            href="#pills-home" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Returns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
+                                            href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                            aria-selected="false">Payments</a>
+                                    </li>
+                                </ul>
+                                <div class="dropdown ml-auto">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        View Reports
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Taxable Sales Summary</a>
+                                        <a class="dropdown-item" href="#">Transaction Without Sales Tax</a>
+                                        <a class="dropdown-item" href="#">Profit & Loss</a>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <div class="tax-tbl-header row m-0 mb-2">
+                                            <div class="mr-auto">
+                                                <select name="" id="" class="select2bs4">
+                                                    <option value="">All Returns</option>
+                                                    <option value="">Open</option>
+                                                    <option value="">Field</option>
+                                                    <option value="">Field & Paid</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>File Date</th>
+                                                <th>Amount Due</th>
+                                                <th>Payemnts</th>
+                                                <th>Balance</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                                <td>01/01/2020</td>
+                                                <td>01/31/2020</td>
+                                                <td></td>
+                                                <td>PRs 0.00</td>
+                                                <td>PRs 0.00</td>
+                                                <td>PRs 0.00</td>
+                                                <td>Open</td>
+                                                <td>
+                                                    <div class="row m-0 align-items-center">
+                                                        <a href="">Prepare Return</a>
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle btn" type="button"
+                                                                id="dropdownMenuButton" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            <div class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton">
+                                                                <a class="dropdown-item" href="#">View Summary</a>
+                                                                <a class="dropdown-item" href="#">View abc Details</a>
+                                                                <a class="dropdown-item" href="#">View Exception
+                                                                    Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <div class="tax-tbl-header row m-0 mb-2 align-items-center">
+                                            <div class="">
+                                                <div class="dropdown btn-sales-batch-dropdown m-2">
+                                                    <a class="" data-toggle="modal" data-target="#filter-mdl"  href="#">
+                                                        Filter
+                                                        <!-- <span class="badge badge-warning navbar-badge">15</span> -->
+                                                    </a>
+                                                </div><!-- Filter Btn DRp End -->
+                                            </div>
+                                            <div class="">
+                                                <a href="recordpayment.html" class="btn btn-secondary">Record Payment</a>
+                                            </div>
+                                        </div>
+                                        <table class="table talbe-bordered table-hover">
+                                            <thead>
+                                                <th>Date</th>
+                                                <th>Type</th>
+                                                <th>Tax Period</th>
+                                                <th>Amount</th>
+                                                <th style="width: 400px;">Memo</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab">...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="col-bottom-flex row">
+                        <div class="col-md-6 pl-4">
+                            &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                        </div>
+                        <div class="col-md-6 text-right pr-4">
+                            <div class="footer-links">
+                                <a href="">Privacy</a>
+                                <a href="">Security</a>
+                                <a href="">Terms Of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

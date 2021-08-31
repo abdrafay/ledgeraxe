@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accounting</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.3.2/dist/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-daterangepicker@3.0.5/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+    <!-- Modal 4 Start -->
+    <div class="modal fade" id="account-mdl" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row m-0">
+                        <div class="col-md-6">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Account Type</label>
+                                    <select name="" id="" class="select2bs4">
+                                        <option value="">Accounts Receivable (A/R)</option>
+                                        <option value="">Current Assets</option>
+                                        <option value="">Fixed Assets</option>
+                                        <option value="">Non-current Assets</option>
+                                        <option value="">Account Payable (A/P)</option>
+                                        <option value="">Credit Card</option>
+                                        <option value="">Current Liabilities</option>
+                                        <option value="">Non Current Liabilities</option>
+                                        <option value="">Owner's Equity</option>
+                                        <option value="">Income</option>
+                                        <option value="">Other Income</option>
+                                        <option value="">Cost Of Sales</option>
+                                        <option value="">Expenses</option>
+                                        <option value="">Other Expense</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Detail Type</label>
+                                    <select name="" id="" class="select2bs4">
+                                        <option value="">Bank</option>
+                                        <option value="">Cash & Cash Equivalents</option>
+                                        <option value="">Cash In Hand</option>
+                                        <option value="">Client Trust Account</option>
+                                        <option value="">Money Market</option>
+                                        <option value="">Rent Held In Trust</option>
+                                        <option value="">Savings</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Description</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="Issubacc">
+                                    <label for="Issubacc">Is Sub Account</label>
+                                    <select name="" id="" class="select2bs4">
+                                        <option value="">Cash & Cash Equivalents</option>
+                                        <option value="">Account Receivable (A/R</option>
+                                        <option value="">Allowance for bad debt</option>
+                                        <option value="">Available for sale assets (short-term)</option>
+                                        <option value="">Inventory</option>
+                                        <option value="">Inventory Asset</option>
+                                        <option value="">Prepaid expenses</option>
+                                        <option value="">Uncategorised Asset</option>
+                                        <option value="">Accumulated depreciation on property, plant and equipment
+                                        </option>
+                                        <option value="">Property, plant and equipment</option>
+                                        <option value="">Assets held for sale</option>
+                                        <option value="">Deferred tax assets</option>
+                                        <option value="">Goodwill</option>
+                                        <option value="">Intangibles</option>
+                                        <option value="">Long-Term Investments</option>
+                                        <option value="">abc Payable</option>
+                                        <option value="">abc Suspense</option>
+                                        <option value="">Accrued liabilities</option>
+                                        <option value="">Dividends payable</option>
+                                        <option value="">Income tax payable</option>
+                                        <option value="">Payroll Clearing</option>
+                                        <option value="">Payroll liabilities</option>
+                                        <option value="">Short-term debit</option>
+                                        <option value="">Accrued holiday payable</option>
+                                        <option value="">Accrued non-current liabilities</option>
+                                        <option value="">Liabilities related to assets held for sale</option>
+                                        <option value="">Long-term debt</option>
+                                        <option value="">Dividend disbursed</option>
+                                        <option value="">Equity in earnings of subsidiaries</option>
+                                        <option value="">Other comprehensive income</option>
+                                        <option value="">Retained Earnings</option>
+                                        <option value="">Share capital</option>
+                                        <option value="">Billable Expense Income</option>
+                                        <option value="">Discounts given</option>
+                                        <option value="">Revenue - General</option>
+                                        <option value="">Sales</option>
+                                        <option value="">Sales - retail</option>
+                                        <option value="">Sales - wholesale</option>
+                                        <option value="">Sales of Product Income</option>
+                                        <option value="">Shipping Income</option>
+                                        <option value="">Uncategorised Income</option>
+                                        <option value="">Change in inventory - COS</option>
+                                        <option value="">Cost of sales</option>
+                                        <option value="">Direct labour - COS</option>
+                                        <option value="">Discounts given - COS</option>
+                                        <option value="">Freight and delivery - COS</option>
+                                        <option value="">Materials - COS</option>
+                                        <option value="">Other - COS</option>
+                                        <option value="">Overhead - COS</option>
+                                        <option value="">Subcontractors - COS</option>
+                                        <option value="">abc Expense</option>
+                                        <option value="">Amortisation expense</option>
+                                        <option value="">Bad debts</option>
+                                        <option value="">Bank charges</option>
+                                        <option value="">Commissions and fees</option>
+                                        <option value="">Dues and subscriptions</option>
+                                        <option value="">Equipment rental</option>
+                                        <option value="">Income tax expense</option>
+                                        <option value="">Insurance - Disability</option>
+                                        <option value="">Insurance - General</option>
+                                        <option value="">Insurance - Liability</option>
+                                        <option value="">Interest expense</option>
+                                        <option value="">Legal and professional fees</option>
+                                        <option value="">Loss on discontinued operations, net of tax</option>
+                                        <option value="">Management compensation</option>
+                                        <option value="">Meals and entertainment</option>
+                                        <option value="">Office expenses</option>
+                                        <option value="">Other general and administrative expenses</option>
+                                        <option value="">Other selling expenses</option>
+                                        <option value="">Other Types of Expenses-Advertising Expenses</option>
+                                        <option value="">Payroll Expenses</option>
+                                        <option value="">Rent or lease payments</option>
+                                        <option value="">Repairs and Maintenance</option>
+                                        <option value="">Shipping and delivery expense</option>
+                                        <option value="">Stationery and printing</option>
+                                        <option value="">Supplies</option>
+                                        <option value="">Travel expenses - general and admin expenses</option>
+                                        <option value="">Travel expenses - selling expenses</option>
+                                        <option value="">Uncategorised Expense</option>
+                                        <option value="">Utilities</option>
+                                        <option value="">Wage expenses</option>
+                                        <option value="">Dividend income</option>
+                                        <option value="">Interest income</option>
+                                        <option value="">Loss on disposal of assets</option>
+                                        <option value="">Other operating income (expenses)</option>
+                                        <option value="">Unrealised loss on securities, net of tax</option>
+                                        <option value="">Other Expense</option>
+                                        <option value="">Reconciliation Discrepancies</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Default Tax Code</label>
+                                    <select name="" id="" class="select2bs4">
+                                        <option value="">abc</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="">Balance</label>
+                                    <input type="number" name="" id="" class="form-control">
+                                    <label for="">As Of</label>
+                                    <input type="date" name="" id="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Filter Modal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                    class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sales.html">Sales</a>
+                            <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                            <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expenses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="expense.html">Expenses</a>
+                            <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tax.html">Taxes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div id="sales">
+                    <div class="sales-head-main-heading">
+                        <h3>Chart Of Accounts</h3>
+
+                    </div>
+                    <div class="all-sale-diplay-invoice-list">
+                        <!-- Display When First Invoice Created -->
+                        <div class="sales-transactions">
+                            <div class="sales-trans-main-heading row m-0 align-items-center">
+                                <div class="transac-drp ml-auto">
+                                    <div class="btn-group align-items-center">
+                                        <a href="" class="new-customer-btn" data-toggle="modal"
+                                            data-target="#account-mdl">New Customer</a>
+                                        <button type="button" class="btn dropdown-toggle import-customer-drp"
+                                            data-toggle="dropdown" data-display="static" aria-haspopup="true"
+                                            aria-expanded="false"></button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" type="button">Import Customer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sale-table-btn-flex pb-2 align-items-center">
+                            <div class="dropdown">
+                                <i class="fas fa-long-arrow-alt-down ml-3 mr-2"></i><button
+                                    class="btn btn-sales-batch-dropdown dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Batch Actions
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Create Statement</a>
+                                    <a class="dropdown-item" href="#">Email</a>
+                                    <a class="dropdown-item" href="#">Make Inactive</a>
+                                    <a class="dropdown-item" href="#">Send Reminders</a>
+                                </div>
+                            </div>
+                            <div class="table-search-bar">
+                                <form class="form-inline ml-3">
+                                    <div class="input-group input-group-sm">
+                                        <input class="form-control form-control-table" type="search"
+                                            placeholder="Search" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-navbar table-btn-nav" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row m-0 ml-auto align-items-center">
+                                <div class="print pr-3">
+                                    <a href="">
+                                        <i class="fas fa-print"></i>
+                                    </a>
+                                </div>
+                                <div class="export-to-excel">
+                                    <a href="">
+                                        <i class="fas fa-file-export"></i>
+                                    </a>
+                                </div>
+
+                                <div class="btn-group add-tbl-cells">
+
+                                    <button type="button" class="btn" data-toggle="dropdown" data-display="static"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" id="filter-chkbx">
+                                        <li class="dropdown-item">
+                                            <div>
+                                                <input type="checkbox" class="cbx tbl-filter" name="tbl-addr"
+                                                    id="addr-chk" style="display: none;">
+                                                <label for="addr-chk" class="check">
+                                                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                        </path>
+                                                        <polyline points="1 9 7 14 15 4"></polyline>
+                                                    </svg>
+                                                </label>
+                                                <label for="addr-chk">Address</label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <input type="checkbox" class="cbx tbl-filter" name="tbl-phone"
+                                                id="phone-chk" style="display: none;">
+                                            <label for="phone-chk" class="check">
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                    <path
+                                                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                    </path>
+                                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                            </label>
+                                            <label for="phone-chk">Phone</label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <input type="checkbox" class="cbx tbl-filter" name="tbl-email"
+                                                id="email-chk" style="display: none;">
+                                            <label for="email-chk" class="check">
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                    <path
+                                                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                    </path>
+                                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                            </label>
+                                            <label for="email-chk">Email</label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <input type="checkbox" class="cbx tbl-filter" name="tbl-attach"
+                                                id="attach-chk" style="display: none;">
+                                            <label for="attach-chk" class="check">
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                    <path
+                                                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                    </path>
+                                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                            </label>
+                                            <label for="attach-chk">Attachements</label>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <table class="table table-bordered table-hover table-sm" id="checkbox-add" style="border: 0;">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" class="cbx" name="" onclick="toggle(this);"
+                                            id="select-all slct-all" style="display: none;">
+                                        <label for="select-all slct-all" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path
+                                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                </path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                        </label>
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Detail Type</th>
+                                    <th>Tax Rate</th>
+                                    <th>Ledgeraxe Balance</th>
+                                    <th>Bank Balance</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="cbx" name="" id="tbl-select slct-all"
+                                            style="display: none;">
+                                        <label for="tbl-select slct-all" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path
+                                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                </path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <div class='edit'>abc</div>
+                                        <input type='text' class='txtedit form-control' value='abc'>
+                                    <td></td>
+                                    <td></td>
+                                    <td>zainrafay12@gmail.com</td>
+                                    <td></td>
+                                    <td>PRs5051.00</td>
+                                    <td class="row m-0 align-items-center"><a href="">Recieve Payment</a>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                                                data-display="static" aria-haspopup="true" aria-expanded="false">
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right drop-up action-drp">
+                                                <a href="" class="dropdown-item">Connect Bank</a>
+                                                <a href="" class="dropdown-item">Edit</a>
+                                                <a href="" class="dropdown-item">Make Inactive</a>
+                                                <a href="" class="dropdown-item">Run Report</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="page-filtering">
+                            <div class="row">
+                                <ul class="pagination pagination-sm ml-auto">
+                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- All Sale Display Invoice List -->
+                </div>
+                <footer>
+                    <div class="col-bottom-flex row">
+                        <div class="col-md-6 pl-4">
+                            &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                        </div>
+                        <div class="col-md-6 text-right pr-4">
+                            <div class="footer-links">
+                                <a href="">Privacy</a>
+                                <a href="">Security</a>
+                                <a href="">Terms Of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purchase Order</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.3.2/dist/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-daterangepicker@3.0.5/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+
+    <nav class="navbar-nav fixed-top p-2 trans-head">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="mr-auto">
+                    <h3>Purchase Order</h3>
+                </div>
+                <div class="ml-auto">
+                    <!-- <a onclick="windows.location.href=""" class="btn btn-primary">Close</a> -->
+                    <a href="index.html" class="btn btn-primary">Close</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main style="margin:80px 0;">
+        <form action="">
+            <div class="container-fluid">
+                <div class="first-half">
+                    <div class="container">
+                        <div class="row m-0">
+                            <div class="col-md-9">
+                                <div class="row m-0">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Supplier</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option selected="selected" disabled>Select a Supplier</option>
+                                                <option value=""><a href="sales.html">Add New</a></option>
+                                                <option>Supplier name</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="">Customer Email</label>
+                                            <input type="email" class="form-control">
+                                            <div class="form-group row m-0 pt-2">
+                                                <input type="checkbox" name="" id="snd-later" class="mr-1">
+                                                <label for="snd-later">Send Later</label>
+                                                <div class="ml-auto">
+                                                    <div class="btn-group">
+                                                        <a type="button" href="" style="font-size: 12px;" class="p-0"
+                                                            data-toggle="dropdown" data-display="static"
+                                                            aria-haspopup="true" aria-expanded="false">Cc/Bcc
+                                                        </a>
+                                                        <div
+                                                            class="dropdown-menu dropdown-menu-lg dropdown-menu-right drop-up action-drp">
+                                                            <div class="container-fluid">
+                                                                <div class="form-group">
+                                                                    <label for="">Cc</label>
+                                                                    <input type="email" name="" id=""
+                                                                        class="form-control">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Bcc</label>
+                                                                    <input type="email" name="" id=""
+                                                                        class="form-control">
+                                                                </div>
+                                                                <div class="p-1 text-right">
+                                                                    <a href="" class="btn btn-primary">Apply</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Mailing Address</label>
+                                            <textarea name="" rows="2" style="resize: none;"
+                                                class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label>Ship To</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option selected="selected" disabled>Select Customer For Address
+                                                </option>
+                                                <option value=""><a href="sales.html">Add New</a></option>
+                                                <option>Due On Reciept</option>
+                                                <option>Net 15</option>
+                                                <option>Net 30</option>
+                                                <option>Net 60</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Purchase Order Date</label>
+                                            <input type="date" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Custom 1</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Custom 2</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Custom 3</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Shipping Address</label>
+                                            <textarea name="" rows="2" style="resize: none;"
+                                                class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Ship Via</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Shipping date</label>
+                                            <input type="date" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="">PO No.</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2 text-center">
+                                    <h6>Amount</h6>
+                                    <h1>PRs0.00</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-half">
+                    <!--  -->
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-clpse" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Category
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <table class="table table-bordered inv-table">
+                                        <thead>
+                                            <tr class="trow-th">
+                                                <th>S.No</th>
+                                                <th style="width: 110px;">Product/Service</th>
+                                                <th>SKU</th>
+                                                <th>Description</th>
+                                                <th style="width: 90px;">QTY</th>
+                                                <th style="width: 90px;">Rate</th>
+                                                <th style="width: 90px;">Amount</th>
+                                                <th style="width: 90px;">Customer</th>
+                                                <th style="width: 10px;">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody">
+                                            <tr class="trow-td" id="del-trow">
+                                                <td style="width: 5px;" class="sno">1</td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 110px;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option value=""><a href="">Add New</a></option>
+                                                        <option>Sales</option>
+                                                        <option>Web</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                                        class="form-control"></textarea>
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 110px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 100%;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option>abc(0%)</option>
+                                                    </select>
+                                                </td>
+                                                <td style="width:10px;"><a href="" class="del-row">Delete</a></td>
+                                            </tr>
+                                            <tr class="trow-td" id="del-trow">
+                                                <td style="width: 5px;" class="sno">2</td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 110px;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option value=""><a href="">Add New</a></option>
+                                                        <option>Sales</option>
+                                                        <option>Web</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                                        class="form-control"></textarea>
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 110px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 100%;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option>abc(0%)</option>
+                                                    </select>
+                                                </td>
+                                                <td style="width:10px;"><a href="#1" class="del-row">Delete</a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="inv-add-trow-btns mt-4">
+                                        <a href="#1" class="add-line btn btn-primary" id="add">Add line</a>
+                                        <a href="#1" class="add-line btn btn-primary" id="remove">Add line</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-clpse btn-link collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        Item Details
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <table class="table table-bordered inv-table">
+                                        <thead>
+                                            <tr class="trow-th">
+                                                <th>S.No</th>
+                                                <th style="width: 110px;">Product/Service</th>
+                                                <th>SKU</th>
+                                                <th>Description</th>
+                                                <th style="width: 90px;">QTY</th>
+                                                <th style="width: 90px;">Rate</th>
+                                                <th style="width: 90px;">Amount</th>
+                                                <th style="width: 90px;">Customer</th>
+                                                <th style="width: 10px;">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody">
+                                            <tr class="trow-td" id="del-trow">
+                                                <td style="width: 5px;" class="sno">1</td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 110px;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option value=""><a href="">Add New</a></option>
+                                                        <option>Sales</option>
+                                                        <option>Web</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                                        class="form-control"></textarea>
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 110px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 100%;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option>abc(0%)</option>
+                                                    </select>
+                                                </td>
+                                                <td style="width:10px;"><a href="" class="del-row">Delete</a></td>
+                                            </tr>
+                                            <tr class="trow-td" id="del-trow">
+                                                <td style="width: 5px;" class="sno">2</td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 110px;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option value=""><a href="">Add New</a></option>
+                                                        <option>Sales</option>
+                                                        <option>Web</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                                        class="form-control"></textarea>
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 90px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <input type="number" name="" style="width: 110px;"
+                                                        class="form-control" id="">
+                                                </td>
+                                                <td>
+                                                    <select class="form-control select2bs4" style="width: 100%;">
+                                                        <option selected="selected" disabled></option>
+                                                        <option>abc(0%)</option>
+                                                    </select>
+                                                </td>
+                                                <td style="width:10px;"><a href="#1" class="del-row">Delete</a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="inv-add-trow-btns mt-4">
+                                        <a href="#1" class="add-line btn btn-primary" id="add">Add line</a>
+                                        <a href="#1" class="add-line btn btn-primary" id="remove">Add line</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--  -->
+
+                    <div class="container-fluid">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <div class="row m-0">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Your Message To Supplier</label>
+                                            <textarea name="" id="" cols="30" rows="3" style="resize: none;" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-6"></div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Memo</label>
+                                            <textarea name="" id="" cols="30" style="resize: none;" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                        <label for="">Attachments<span
+                                                style="font-size: 12px; color: rgb(177, 177, 177); margin-left: 10px;">Maximum
+                                                size : 20Mb</span></label><br>
+                                        <input type="file" class="multi-file-uploader pb-1" multiple name="">
+                                        <div class="multi-img-preview"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <div class="row m-0 justify-content-end align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="row m-0 justify-content-end">
+                                            <h6>Subtotal</h6>
+                                            <h6 class="ml-4">PRs 0.00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-2"></div>
+                                    <div class="col-md-12">
+                                        <div class="row m-0 justify-content-end">
+                                            <h6>Total</h6>
+                                            <h6 class="ml-4">PRs 0.00</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+    <footer class="fixed-bottom p-2 trans-footer">
+        <div class="container-fluid">
+            <row class="row m-0 align-items-center">
+                <div class="col-md-3 mr-auto foot-link">
+                    <a href="">Print Or Preview</a>
+                    <a href="">Customize</a>
+                </div>
+                <div class="col-md-6 pl-4 text-center" style="color: #fff; font-size: 14px;">
+                    &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                </div>
+                <div class="col-md-3 ml-auto text-right">
+                    <a href="" class="btn btn-secondary">Save</a>
+                    <a href="" class="btn btn-secondary">Save & Send</a>
+                </div>
+            </row>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

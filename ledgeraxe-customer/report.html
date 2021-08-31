@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Report</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                    class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sales.html">Sales</a>
+                            <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                            <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expenses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="expense.html">Expenses</a>
+                            <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tax.html">Taxes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="wrapper">
+        <!-- Content Header (Page header) -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="all-tax-display pb-4" style="height: 100%;">
+                    <div class="row m-0">
+                        <div class="mr-auto p-4">
+                            <h2>Reports</h2>
+                        </div>
+                    </div>
+                    <div class="tax-display-content">
+                        <div class="row m-0">
+
+                            <div class="col-12 pt-4">
+                                <div class="row m-0 align-items-center">
+                                    <ul class="nav nav-pills mb-3 align-items-center" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                                href="#pills-home" role="tab" aria-controls="pills-home"
+                                                aria-selected="true">Standard</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
+                                                href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                                aria-selected="false">Custom Report</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill"
+                                                href="#pills-contact" role="tab" aria-controls="pills-contact"
+                                                aria-selected="false">Management Reports</a>
+                                        </li>
+                                    </ul>
+                                    <div class="col-md-4 table-search-bar ml-auto text-right">
+                                        <form class="form-group">
+                                            <div class="input-group input-group-sm ml-auto">
+                                                <input class="form-control form-control-table" type="search"
+                                                    placeholder="Find by Report Name" aria-label="Search">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-navbar table-btn-nav" type="submit">
+                                                        <i class="fas fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <!-- -------------------------------------------------------------------------------- -->
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <div class="rp-list p-4">
+                                            <h3>Standard Reports</h3>
+                                            <ol>
+                                                <li><a href="">Balance Sheet Report</a></li>
+                                                <li><a href="">General Ledger Report</a></li>
+                                                <li><a href="">Journal Report</a></li>
+                                                <li><a href="">Profit & Loss Report</a></li>
+                                                <li><a href="">Accounts Receivable Ageing Summary</a></li>
+                                            </ol>
+                                        </div>
+
+                                    </div>
+                                    <!-- -------------------------------------------------------------------------------- -->
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <div class="table-responsive">
+                                            <table class="table talbe-bordered table-hover">
+                                                <thead>
+                                                    <th>Name</th>
+                                                    <th>Created</th>
+                                                    <th>Date Range</th>
+                                                    <th>Action</th>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="page-filtering">
+                                            <div class="row">
+                                                <ul class="pagination pagination-sm ml-auto">
+                                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- -------------------------------------------------------------------------------- -->
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab">
+                                        <div class="table-reponsive">
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <th>Name</th>
+                                                    <th>Created By</th>
+                                                    <th>Last Modified</th>
+                                                    <th>Report Period</th>
+                                                    <th>Action</th>
+                                                </thead>
+                                                <tbody>
+                                                    <td>Company Overview</td>
+                                                    <td>Ledgeraxe</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control select2bs4">
+                                                            <option value="">All Dates</option>
+                                                            <option value="">Custom</option>
+                                                            <option value="">Today</option>
+                                                            <option value="">This Week</option>
+                                                            <option value="">This Week-to-date</option>
+                                                            <option value="">This Month</option>
+                                                            <option value="">This Month-to-date</option>
+                                                            <option value="">This Quarter</option>
+                                                            <option value="">This Quarter-to-date</option>
+                                                            <option value="">This Year</option>
+                                                            <option value="">This Year-to-date</option>
+                                                            <option value="">This Year-to-last-month</option>
+                                                            <option value="">Yesterday</option>
+                                                            <option value="">Recent</option>
+                                                            <option value="">Last Week</option>
+                                                            <option value="">Last Week-to-date</option>
+                                                            <option value="">Last Month</option>
+                                                            <option value="">Last Month-to-date</option>
+                                                            <option value="">Last Quarter</option>
+                                                            <option value="">Last Quarter-to-date</option>
+                                                            <option value="">Last Year</option>
+                                                            <option value="">Last Year-to-date</option>
+                                                            <option value="">Since 30 Days Ago</option>
+                                                            <option value="">Since 60 Days Ago</option>
+                                                            <option value="">Since 90 Days Ago</option>
+                                                            <option value="">Since 365 Days Ago</option>
+                                                            <option value="">Next Week</option>
+                                                            <option value="">Next 4 Weeks</option>
+                                                            <option value="">Next Month</option>
+                                                            <option value="">Next Quarter</option>
+                                                            <option value="">Next Year</option>
+                                                        </select>
+                                        </div>
+                                        </td>
+                                        <td>
+                                            <a href="">View</a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn dropdown-toggle p-0"
+                                                    data-toggle="dropdown" data-display="static" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right drop-up action-drp">
+                                                    <a href="" class="dropdown-item">Edit</a>
+                                                    <a href="" class="dropdown-item">Send</a>
+                                                    <a href="" class="dropdown-item">Export As PDF</a>
+                                                    <a href="" class="dropdown-item">Export As DOCX</a>
+                                                    <a href="" class="dropdown-item">Copy</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="page-filtering">
+                                        <div class="row">
+                                            <ul class="pagination pagination-sm ml-auto">
+                                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="col-bottom-flex row">
+                    <div class="col-md-6 pl-4">
+                        &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                    </div>
+                    <div class="col-md-6 text-right pr-4">
+                        <div class="footer-links">
+                            <a href="">Privacy</a>
+                            <a href="">Security</a>
+                            <a href="">Terms Of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    </div>
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

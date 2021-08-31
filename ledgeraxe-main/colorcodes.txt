@@ -1,0 +1,8 @@
+linear-gradient(90deg, #512DA8 0%, #7E57C2 100%)
+btn-color #00B0FF stars
+btn-color #263238 testimonial
+#F56400 orange
+
+
+footer2 #edeef0, nav #5FB709, footer 1 #262626, 
+linear-gradient(90deg,  #106b34 0%, #a0dc06 100%)

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A/R Ageing Summary Report | Ledgeraxe</title>
+  <!-- Icon -->
+  <link rel="icon" href="images/logo/logo-circle.png">
+  <!-- Icon -->
+
+  <!-- ------------Css----------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/customer-panel.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.3.2/dist/select2-bootstrap4.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-daterangepicker@3.0.5/daterangepicker.css">
+ <link rel="stylesheet" href="css/style.css">
+  <!-- ------------Css----------- -->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid"> <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60"
+          height="49" alt="" class="img-fluid"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active"> <a class="nav-link" href="index.html">Dashboard <span
+                class="sr-only">(current)</span></a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sales </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item"
+                href="sales.html">Sales</a> <a class="dropdown-item" href="sales_customer.html">Customers</a> <a
+                class="dropdown-item" href="products_services.html">Products & Services</a> </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Expenses </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item"
+                href="expense.html">Expenses</a> <a class="dropdown-item" href="suppliers.html">Suppliers</a> </div>
+          </li>
+          <li class="nav-item active"> <a class="nav-link" href="employee.html">Employees</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="report.html">Reports</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="tax.html">Taxes</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="chartofaccounts.html">Accounting</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div id="sales">
+          <div class="sales-head-main-heading">
+            <h3>A/R Ageing Summary</h3>
+            <a href="report.html" style="font-size: 12px;">Back to report list</a>
+          </div>
+          <form action="">
+            <div class="row m-0">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="">Report Period</label>
+                  <select name="" id="" class="form-control select2bs4" style="max-width: 100%!important">
+                    <option value="">Custom</option>
+                    <option value="">All Dates</option>
+                    <option value="">Today</option>
+                    <option value="">This Week</option>
+                    <option value="">This Week To Date</option>
+                    <option value="">This Month</option>
+                    <option value="">This Month To Date</option>
+                    <option value="">This Quarter</option>
+                    <option value="">This Quarter To Date</option>
+                    <option value="">This Year</option>
+                    <option value="">This Year To Date</option>
+                    <option value="">This Year To Last Month</option>
+                    <option value="">Yesterday</option>
+                    <option value="">Recent</option>
+                    <option value="">Last Week</option>
+                    <option value="">Last Week To Date</option>
+                    <option value="">Last Month</option>
+                    <option value="">Last Month To Date</option>
+                    <option value="">Last Quarter</option>
+                    <option value="">Last Quarter To Date</option>
+                    <option value="">Last Year</option>
+                    <option value="">Last Year To Date</option>
+                    <option value="">Since 30 Days Ago</option>
+                    <option value="">Since 60 Days Ago</option>
+                    <option value="">Since 90 Days Ago</option>
+                    <option value="">Since 365 Days Ago</option>
+                    <option value="">Next Week</option>
+                    <option value="">Next 4 Weeks</option>
+                    <option value="">Next Month</option>
+                    <option value="">Next Quarter</option>
+                    <option value="">Next Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <!-- Date range -->
+                <div class="form-group">
+                  <label>As Of</label>
+                  <input type="date" name="" id="" class="form-control">
+                  <!-- /.input group -->
+                </div>
+                <!-- /.form group -->
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="">Ageing Method</label>
+                  <div class="row m-0">
+                    <div class="mr-2">
+                      <input type="checkbox" class="cbx" id="currentcbx-ageing" style="display: none;">
+                      <label for="currentcbx-ageing" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                          <path
+                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                          </path>
+                          <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                      </label>
+                      <label for="currentcbx-ageing">Current</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="cbx" id="reportcbxageing" style="display: none;">
+                      <label for="reportcbxageing" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                          <path
+                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                          </path>
+                          <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                      </label>
+                      <label for="reportcbxageing">Accrual</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="">Days Per Ageing Period</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="">Number Of Periods</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-3 mr-auto"> <a href="" class="btn btn-secondary">Run Report</a> </div>
+              <div class="ml-auto"> <a href="" class="btn btn-secondary">Customize</a> <a href=""
+                  class="btn btn-secondary">Save Customization</a> </div>
+            </div>
+            <div class="rep-chart pb-4">
+              <div class="container">
+                <div class="rep-chart-inner">
+                  <div class="rep-chrt-inner-head row m-0">
+                    <div class="mr-auto row m-0">
+                      <div class="dropdown"> <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item"
+                            href="#">Defualt</a> <a class="dropdown-item" href="#">Total in Ascending Order</a> <a
+                            class="dropdown-item" href="#">Total in Descending Order</a> </div>
+                      </div>
+                      <a href="#" class="btn add-notes-to-sheet">Add Notes</a>
+                    </div>
+                    <div class="ml-auto row m-0"> <a href="" class="btn">Email</a> <a href="" class="btn">Print</a>
+                      <div class="dropdown"> <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Export </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item"
+                            href="#">Export To Excel</a> <a class="dropdown-item" href="#">Export To PDF</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rep-chrt-inner-content">
+                    <div class="text-center">
+                      <h5>Abdul Rafay</h5>
+                      <strong>
+                        <h6>Profit & Loss</h6>
+                      </strong>
+                      <p>February 2020</p>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Current</th>
+                            <th>1-30</th>
+                            <th>31-60</th>
+                            <th>61-90</th>
+                            <th>91 and Over</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>abc</td>
+                            <td>5050.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>PRs 5050.00</td>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <th>PRs 5050.00</th>
+                            <th>PRs 0.00</th>
+                            <th>PRs 0.00</th>
+                            <th>PRs 0.00</th>
+                            <th>PRs 0.00</th>
+                            <th>PRs 5050.00</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="notes-adding-area hide">
+                      <textarea name="" id="" cols="30" placeholder="Add Notes" rows="3"
+                        class="form-control"></textarea>
+                    </div>
+                    <p class="text-center" style="color: rgb(153, 153, 153);"> Accural basis Thursday, 6 Februrary 2020
+                      00:00 PM GMT+05:00 </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <footer>
+          <div class="col-bottom-flex row">
+            <div class="col-md-6 pl-4">
+              &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+            </div>
+            <div class="col-md-6 text-right pr-4">
+              <div class="footer-links">
+                <a href="">Privacy</a>
+                <a href="">Security</a>
+                <a href="">Terms Of Service</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+ <script src="js/adminlte.min.js"></script>
+ <script src="js/demo.js"></script>
+ <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | Ledgeraxe</title>
+    <!-- ------------Css----------- -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+
+    <nav class="navbar-nav fixed-top p-2 trans-head">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="mr-auto">
+                    <h3>Sales Reciept no.</h3>
+                </div>
+                <div class="ml-auto">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <!-- <a onclick="windows.location.href=""" class="btn btn-primary">Close</a> -->
+                    <a href="index.html" class="btn btn-primary">Close</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main style="margin:80px 0;">
+        <form action="">
+            <div class="container-fluid">
+                <div class="first-half">
+                    <div class="container">
+                    <div class="row m-0">
+                        <div class="col-md-9">
+                            <div class="row m-0">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label>Customer</label>
+                                        <select class="form-control select2bs4" style="width: 100%;">
+                                            <option selected="selected" disabled>Select a Customer</option>
+                                            <option value=""><a href="sales.html">Add New</a></option>
+                                            <option>Customer name</option>
+                                        </select>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="">Customer</label>
+                                        <input type="email" class="form-control">
+                                        <div class="form-group row m-0 pt-2">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="cbx tbl-filter" name="" id="snd-later"
+                                                    style="display: none;">
+                                                <label for="snd-later" class="check">
+                                                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                        </path>
+                                                        <polyline points="1 9 7 14 15 4"></polyline>
+                                                    </svg>
+                                                </label>
+                                                <label for="snd-later">Send Later</label>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div class="btn-group">
+                                                    <a type="button" href="" style="font-size: 12px;" class="p-0" data-toggle="dropdown"
+                                                        data-display="static" aria-haspopup="true" aria-expanded="false">Cc/Bcc
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right drop-up action-drp">
+                                                        <div class="container-fluid">
+                                                            <div class="form-group">
+                                                                <label for="">Cc</label>
+                                                                <input type="email" name="" id="" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="">Bcc</label>
+                                                                <input type="email" name="" id="" class="form-control">
+                                                            </div>
+                                                            <div class="p-1 text-right">
+                                                            <a href="" class="btn btn-primary">Apply</a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Billing Address</label>
+                                        <textarea name="" rows="2" style="resize: none;"
+                                            class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Sales Reciept Date</label>
+                                        <input type="date" name="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+                                
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Shipping Address</label>
+                                        <textarea name="" rows="2" style="resize: none;"
+                                            class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Shipping Date</label>
+                                        <input type="date" name="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Ship Via</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Tracking No.</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Payment Method</label>
+                                        <select class="form-control select2bs4" style="width: 100%;">
+                                            <option selected="selected" disabled>How did you pay?</option>
+                                            <option value="">Cash</option>
+                                            <option>Cheque</option>
+                                            <option>Credit Card</option>
+                                            <option>Direct Debit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="">Reference No.</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label>Payment Accounts</label>
+                                        <select class="form-control select2bs4" style="width: 100%;">
+                                            <option selected="selected">Cash and Cash Equivalents</option>
+                                            <option value="">Allowance for bad debt</option>
+                                            <option>Avaiblable For Sale Assets (short term)</option>
+                                            <option>Inventory</option>
+                                            <option>Inventory Asset</option>
+                                            <option>Prepaid Expenses</option>
+                                            <option>Uncategorized Asset</option>
+                                        </select>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="">Sales Reciept No.</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12 p-2 text-center">
+                                <h6>Balance Due</h6>
+                                <h1>PRs0.00</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="second-half">
+                    <div class="ml-auto">
+                        <div class="col-md-3 mb-2">
+                        <label for="">Amounts are</label>
+                        <select name="" id="" class="form-control">
+                            <option value="">Exclusive Of Tax</option>
+                            <option value="">Inclusive Of Tax</option>
+                            <option value="">Out Of Scope Of Tax</option>
+                        </select>
+                    </div>
+                    </div>
+                    <table class="table table-bordered inv-table">
+                        <thead>
+                            <tr class="trow-th">
+                                <th>S.No</th>
+                                <th style="width:10px">Service Date</th>
+                                <th style="width: 110px;">Product/Service</th>
+                                <th>SKU</th>
+                                <th>Description</th>
+                                <th style="width: 90px;">QTY</th>
+                                <th style="width: 90px;">Rate</th>
+                                <th style="width: 90px;">Amount</th>
+                                <th>Tax</th>
+                                <th style="width: 10px;">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="trow-td" id="del-trow">
+                                <td style="width: 5px;" class="sno">1</td>
+                                <td>
+                                    <input type="date" style="width: 150px;" name="" id="" class="form-control">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 110px;"><option selected="selected" disabled></option><option value=""><a href="">Add New</a></option><option>Sales</option><option>Web</option></select>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;" class="form-control"></textarea>
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 90px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 90px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 110px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 100%;"><option selected="selected" disabled></option><option>abc(0%)</option></select>
+                                </td>
+                                <td style="width:10px;"><a href="" class="del-row">Delete</a></td>
+                            </tr>
+                            <tr class="trow-td" id="del-trow">
+                                <td style="width: 5px;" class="sno">2</td>
+                                <td>
+                                    <input type="date" style="width: 150px;" name="" id="" class="form-control">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 110px;">
+                                        <option selected="selected" disabled></option>
+                                        <option value=""><a href="">Add New</a></option>
+                                        <option>Sales</option>
+                                        <option>Web</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;" class="form-control"></textarea>
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 90px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 90px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <input type="number" name="" style="width: 110px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 100%;">
+                                        <option selected="selected" disabled></option>
+                                        <option>abc(0%)</option>
+                                    </select>
+                                </td>
+                                <td style="width:10px;" ><a href="#1" class="del-row">Delete</a></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="inv-add-trow-btns">
+                        <a  href="#1" class="add-line btn btn-primary" id="add">Add line</a>
+                        <a  href="#1" class="add-line btn btn-primary" id="remove">Add line</a>
+                    </div>
+                    <div class="container-fluid">
+                    <div class="row m-0">
+                    <div class="col-md-8">
+                        <div class="row m-0">
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Message On Invoice</label>
+                            <input type="text" placeholder="This will show up on the invoice" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Message On Invoice</label>
+                            <input type="text" placeholder="This will show up on the invoice" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                        <label for="">Attachments<span
+                                style="font-size: 12px; color: rgb(177, 177, 177); margin-left: 10px;">Maximum
+                                size : 20Mb</span></label><br>
+                        <input type="file" class="multi-file-uploader pb-1" multiple name="">
+                        <div class="multi-img-preview"></div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row m-0 justify-content-end align-items-center">
+                            <div class="col-md-12">
+                                <div class="row m-0 justify-content-end">
+                                    <h6>Subtotal</h6>
+                                    <h6 class="ml-4">PRs 0.00</h6>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Shipping</label>
+                                    <select class="form-control select2bs4" style="width: 100%;">
+                                        <option selected="selected" disabled>Select Shipping Tax</option>
+                                        <option>abc(0%)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="" style="visibility: hidden;">.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row m-0 justify-content-end">
+                                    <h6>Total</h6>
+                                    <h6 class="ml-4">PRs 0.00</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row m-0 justify-content-end">
+                                    <h6>Amount Received</h6>
+                                    <h6 class="ml-4">PRs 0.00</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row m-0 justify-content-end">
+                                    <h6>Balance Due</h6>
+                                    <h6 class="ml-4">PRs 0.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+    <footer class="fixed-bottom p-2 trans-footer">
+        <div class="container-fluid">
+            <row class="row m-0 align-items-center">
+                <div class="col-md-3 mr-auto foot-link">
+                    <a href="">Print Or Preview</a>
+                    <a href="">Customize</a>
+                </div>
+                <div class="col-md-6 pl-4 text-center" style="color: #fff; font-size: 14px;">
+                    &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                </div>
+                <div class="col-md-3 ml-auto text-right">
+                    <a href="" class="btn btn-secondary">Save</a>
+                    <a href="" class="btn btn-secondary">Save & Send</a>
+                </div>
+            </row>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

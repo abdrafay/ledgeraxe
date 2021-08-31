@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense</title>
+    <!-- ------------Css----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+    <div class="modal fade" id="filter-drp" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product/Service information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row p-2 align-items-center">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select class="select2bs4" style="width: 100%;">
+                                <option selected="selected">All Transactions</option>
+                                <option>Expense</option>
+                                <option>Bill Payments</option>
+                                <option>Cheque</option>
+                                <option>Recently Paid</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                        <div></div>
+                    </div>
+                    <div class="col-6">
+                        <a href="" style="font-size: 12px;">View/deleted Voided Transactions</a>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="select2bs4" style="width: 100%;">
+                                <option selected="selected">All statuses</option>
+                                <option>Open</option>
+                                <option>Overdue</option>
+                                <option>Paid</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Delivery Method</label>
+                            <select class="select2bs4" style="width: 100%;">
+                                <option selected="selected">Any</option>
+                                <option>Print Later</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <select class="select2bs4" style="width: 100%;">
+                                <option selected="selected">Last 365 Days</option>
+                                <option>Custom</option>
+                                <option>Today</option>
+                                <option>Yesterday</option>
+                                <option>This Week</option>
+                                <option>This Month</option>
+                                <option>This Quarter</option>
+                                <option>This Year</option>
+                                <option>Last Week</option>
+                                <option>Last Month</option>
+                                <option>Last Quarter</option>
+                                <option>Last Year</option>
+                                <option>All Dates</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Payee</label>
+                            <select class="select2bs4" style="width: 100%;">
+                                <option selected="selected">All</option>
+                                <option>Payee name</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-12">
+                        <!-- Date range -->
+                        <div class="form-group">
+                            <label>Date range:</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control float-right"
+                                    id="reservation">
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Apply</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                    class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sales.html">Sales</a>
+                            <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                            <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expenses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="expense.html">Expenses</a>
+                            <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tax.html">Taxes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!-- Content Header (Page header) -->
+       
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="all-sale-first-time-display">
+                    <!-- Display only when No Invoices made-->
+                    <div class="row m-0 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <div class="inner-first-sale-col p-4">
+                                <h3>Track your expenses to see how you spend money</h3>
+                                <div class="first-sale-col-btn">
+                                    <a href="cr-expense.html">Add an Expense</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="inner-first-sale-col p-4">
+                                <img src="images/logo/logo.png" alt="" class="img-fluid">
+                                <div class="inovice-create-tip">
+                                    <i class="far fa-lightbulb"></i>
+                                    <p>TIP : Import expenses from your bank so you dont't have to enter them manually. <a href="">Connect your Bank</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="all-sale-diplay-invoice-list">
+                    <!-- Display When First Invoice Created -->
+                    <div class="sales-transactions">
+                        <div class="sales-trans-main-heading row m-0">
+                            <div class="transac-heading">
+                            <h4>Expense Transactions</h4>
+                        </div>
+                        <div class="transac-drp ml-auto">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle btn-sales-new-transac" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                                  New-Transaction
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                  <a class="dropdown-item" href="cr-expense.html" type="button">Expense</a>
+                                  <a class="dropdown-item" href="cr-cheque.html" type="button">Cheque</a>
+                                  <a class="dropdown-item" href="supplier-cr" type="button">Supplier Credit</a>
+                                </div>
+                              </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="inner-sales-trans-cols">
+                                    <a href="">Unbilled Last 365 Days</a>
+                                    <div class="content-sales-trans-cols-1">
+                                        <p>PRs0</p>
+                                        <p style="font-size: 12px;">0 ESTIMATE</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="">Unpaid Last 365 Days</a>
+                                <div class="inner-sales-trans-cols row">
+                                    <div class="col-md-6 p-0">
+                                        <div class="content-sales-trans-cols-2 mr-auto">
+                                            <p>PRs0</p>
+                                            <p style="font-size: 12px;">0 OVERDUE</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="content-sales-trans-cols-3 ml-auto">
+                                            <p>PRs0</p>
+                                            <p style="font-size: 12px;">0 OPEN INVOICE</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="inner-sales-trans-cols">
+                                    <a href="">Paid</a>
+                                    <div class="content-sales-trans-cols-4">
+                                        <p>PRs0</p>
+                                        <p style="font-size: 12px;">0 PAID LAST 30 DAYS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sale-table-btn-flex pb-2 align-items-center">
+                        <div class="dropdown">
+                            <i class="fas fa-long-arrow-alt-down ml-3 mr-2"></i><button
+                                class="btn btn-sales-batch-dropdown dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Batch Actions
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Print Transactions</a>
+                                <a class="dropdown-item" href="#">Categorise Selected</a>
+                                <a class="dropdown-item" href="#">Void Transactions</a>
+                            </div>
+                        </div>
+                        <div class="dropdown btn-sales-batch-dropdown m-2">
+                            <a class="" data-toggle="modal" data-target="#filter-drp" href="#">
+                                Filter
+                                <!-- <span class="badge badge-warning navbar-badge">15</span> -->
+                            </a>
+                        
+                        </div><!-- Filter Btn DRp End -->
+                        <div class="row m-0 ml-auto align-items-center">
+                            <div class="print pr-3">
+                                <a href="">
+                                    <i class="fas fa-print"></i>
+                                </a>
+                            </div>
+                        <div class="export-to-excel">
+                            <a href="">
+                            <i class="fas fa-file-export"></i>
+                        </a>
+                        </div>
+
+                        <div class="btn-group add-tbl-cells">
+
+                            <button type="button" class="btn" data-toggle="dropdown" data-display="static"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-item">
+                                    <div>
+                                        <input type="checkbox" class="cbx tbl-filter" name="tbl-src"
+                                            id="source-chk" style="display: none;">
+                                        <label for="source-chk" class="check">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path
+                                                    d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                                </path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                            </svg>
+                                        </label>
+                                        <label for="source-chk">Source</label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="checkbox" class="cbx tbl-filter" name="tbl-memo" id="memo-chk"
+                                        style="display: none;">
+                                    <label for="memo-chk" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                    <label for="memo-chk">Memo</label>
+                                </li>
+
+                                
+                                <li class="dropdown-item">
+                                    <input type="checkbox" class="cbx tbl-filter" name="tbl-attach"
+                                        id="attach-chk" style="display: none;">
+                                    <label for="attach-chk" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                    <label for="attach-chk">Attach</label>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <table class="table table-bordered table-hover table-sm" style="border: 0;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="text-center">
+                                    <input type="checkbox" class="cbx tbl-filter" onclick="toggle(this)" name="" id="slct-all" style="display: none;">
+                                    <label for="slct-all" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                </th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>NO.</th>
+                                <th>Payee</th>
+                                <th>Method</th>
+                                <th>Category</th>
+                                <th class="tbl-src">Source</th>
+                                <th class="tbl-memo">Memo</th>
+                                <th class="tbl-attach">Attachments</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="checkbox" class="cbx tbl-filter" name="" id="tbl-select" style="display: none;">
+                                    <label for="source-chk" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                </td>
+                                <td>01/16/2020</td>
+                                <td>Expense</td>
+                                <td>1001</td>
+                                <td>abccddd</td>
+                                <td>Cash</td>
+                                <td>
+                                    <select name="" class="form-control select2bs4" style="width:100%;">
+                                        <option>1</option>
+                                        <option>1</option>
+                                        <option>1</option>
+                                </select>
+                                </td>
+                                <td class="tbl-src"></td>
+                                <td class="tbl-memo"></td>
+                                <td class="tbl-attach"></td>
+                                <td>PRs5051.00</td>
+                                <td>
+                                    <div class="row m-0 align-items-center">
+                                    <a href="cr-expense.html">View/Edit</a>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                                            data-display="static" aria-haspopup="true" aria-expanded="false">
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right drop-up action-drp">
+                                            <a href="" class="dropdown-item">Print</a>
+                                            <a href="" class="dropdown-item">Copy</a>
+                                            <a href="" class="dropdown-item">Delete</a>
+                                            <a href="" class="dropdown-item">Void</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </td>
+                            </tr>
+                            <tr class="invoice-total-tr" style="border: 0!important;">
+                                <td></td>
+                                <td></td>
+                                <td>Total</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="sl-th-source hide"></td>
+                                <td class="sl-th-memo hide"></td>
+                                <td class="sl-th-attach hide"></td>
+                                <td>PRs5015.00</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="page-filtering">
+                        <div class="row">
+                            <ul class="pagination pagination-sm ml-auto">
+                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- All Sale Display Invoice List -->
+                <!--  -->
+                <footer>
+                    <div class="col-bottom-flex row">
+                        <div class="col-md-6 pl-4">
+                            &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                        </div>
+                        <div class="col-md-6 text-right pr-4">
+                            <div class="footer-links">
+                                <a href="">Privacy</a>
+                                <a href="">Security</a>
+                                <a href="">Terms Of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

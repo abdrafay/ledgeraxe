@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | Ledgeraxe</title>
+    <!-- ------------Css----------- -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+
+    <nav class="navbar-nav fixed-top p-2 trans-head">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="mr-auto">
+                    <h3>Cheque No.</h3>
+                </div>
+                <div class="ml-auto">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <!-- <a onclick="windows.location.href=""" class="btn btn-primary">Close</a> -->
+                    <a href="index.html" class="btn btn-primary">Close</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main style="margin:80px 0;">
+        <form action="">
+            <div class="container-fluid">
+                <div class="first-half">
+                    <div class="container">
+                        <div class="row m-0">
+                            <div class="col-md-9">
+                                <div class="row m-0">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Payee</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option selected="selected" disabled>Select a Customer</option>
+                                                <option value=""><a href="sales.html">Add New</a></option>
+                                                <option>Customer name</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Payee</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option selected="selected" disabled>Select a Supplier</option>
+                                                <option value=""><a href="sales.html">Add New</a></option>
+                                                <option>Supplier name</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Payee</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option selected="selected" disabled>Select a Employee</option>
+                                                <option value=""><a href="sales.html">Add New</a></option>
+                                                <option>Employee name</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Payment Accounts</label>
+                                            <select class="form-control select2bs4" style="width: 100%;">
+                                                <option value="">Add New</option>
+                                                <option selected="selected">Cash and Cash Equivalents</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="">Balance</label>
+                                        <p>PRs-000.00</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="">Mailing Address</label>
+                                            <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <label for="">Payment Date</label>
+                                            <input type="date" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="">Cheque No.</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2 text-center">
+                                    <h6>Amount</h6>
+                                    <h1>PRs0.00</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-half mt-4 pt-4">
+                    <div class="ml-auto">
+                        <div class="col-md-3 mb-2">
+                            <label for="">Amounts are</label>
+                            <select name="" id="" class="select2bs4">
+                                <option value="">Exclusive Of Tax</option>
+                                <option value="">Inclusive Of Tax</option>
+                                <option value="">Out Of Scope Of Tax</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table table-bordered inv-table">
+                        <thead>
+                            <tr class="trow-th">
+                                <th>S.No</th>
+                                <th style="width: 130px;">Category</th>
+                                <th>Description</th>
+                                <th style="width: 100px;">Amount</th>
+                                <th style="width: 100px;">Tax</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="trow-td" id="del-trow">
+                                <td style="width: 5px;" class="sno">1</td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 210px;">
+                                        <option selected="selected" disabled></option>
+                                        <option value=""><a href="">Add New</a></option>
+                                        <option>abc Expense</option>
+                                        <option>Amortization Expense</option>
+                                        <option value="">Bad Debts</option>
+                                        <option value="">Bank Charges</option>
+                                        <option value="">Commisions and Fees</option>
+                                        <option value="">Dues & Subscription</option>
+                                        <option value="">Equipment Rental</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                        class="form-control"></textarea>
+                                </td>
+
+                                <td>
+                                    <input type="number" name="" style="width: 100px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 100px;">
+                                        <option selected="selected" disabled></option>
+                                        <option>abc12%</option>
+                                    </select>
+                                </td>
+
+                                <td style="width:10px;"><a href="" class="del-row">Delete</a></td>
+                            </tr>
+                            <tr class="trow-td" id="del-trow">
+                                <td style="width: 5px;" class="sno">2</td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 210px;">
+                                        <option selected="selected" disabled></option>
+                                        <option value=""><a href="">Add New</a></option>
+                                        <option>abc Expense</option>
+                                        <option>Amortization Expense</option>
+                                        <option value="">Bad Debts</option>
+                                        <option value="">Bank Charges</option>
+                                        <option value="">Commisions and Fees</option>
+                                        <option value="">Dues & Subscription</option>
+                                        <option value="">Equipment Rental</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea name="" id="" cols="40" rows="1" style="resize: none;"
+                                        class="form-control"></textarea>
+                                </td>
+
+                                <td>
+                                    <input type="number" name="" style="width: 100px;" class="form-control" id="">
+                                </td>
+                                <td>
+                                    <select class="form-control select2bs4" style="width: 100px;">
+                                        <option selected="selected" disabled></option>
+                                        <option>abc12%</option>
+                                    </select>
+                                </td>
+
+                                <td style="width:10px;"><a href="" class="del-row">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="inv-add-trow-btns">
+                        <a href="#1" class="add-line btn btn-primary" id="add">Add line</a>
+                        <a href="#1" class="add-line btn btn-primary" id="remove">Add line</a>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <div class="row m-0">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Memo</label>
+                                            <textarea name="" id="" class="form-control" cols="30" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Attachments<span
+                                                    style="font-size: 12px; color: rgb(177, 177, 177); margin-left: 10px;">Maximum
+                                                    size : 20Mb</span></label><br>
+                                            <input type="file" class="multi-file-uploader pb-1" multiple name="">
+                                            <div class="multi-img-preview"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row m-0 justify-content-end align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="row m-0 justify-content-end">
+                                            <h6>Subtotal</h6>
+                                            <h6 class="ml-4">PRs 0.00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row m-0 justify-content-end">
+                                            <h6>Total</h6>
+                                            <h6 class="ml-4">PRs 0.00</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+    <footer class="fixed-bottom p-2 trans-footer">
+        <div class="container-fluid">
+            <row class="row m-0 align-items-center">
+                <div class="col-md-3 mr-auto foot-link">
+                    <a href="">Print Or Preview</a>
+                    <a href="">Customize</a>
+                </div>
+                <div class="col-md-6 pl-4 text-center" style="color: #fff; font-size: 14px;">
+                    &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                </div>
+                <div class="col-md-3 ml-auto text-right">
+                    <a href="" class="btn btn-secondary">Save</a>
+                    <a href="" class="btn btn-secondary">Save & Send</a>
+                </div>
+            </row>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>

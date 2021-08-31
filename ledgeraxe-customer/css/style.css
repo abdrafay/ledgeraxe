@@ -1,0 +1,1082 @@
+body {
+    background: #f4f6f9;
+}
+
+/* Checkbox */
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+.check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #C8CCD4;
+    stroke-width: 2;
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease;
+}
+
+.check~label {
+    cursor: pointer;
+    margin-left: 5px !important;
+    font-size: 13px;
+    font-weight: 500 !important;
+}
+
+.check path {
+    stroke-dasharray: 60;
+    /* stroke-dashoffset: 0; */
+}
+
+.check polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+
+.check polyline:hover,
+.check polyline:before {
+    opacity: 1
+}
+
+.check svg {
+    stroke: rgb(3, 189, 65);
+    width: 20px;
+    height: 20px;
+    ;
+}
+
+.cbx:checked+.check svg {
+    stroke: rgb(3, 189, 65);
+}
+
+.cbx:checked+.check path {
+    stroke-dashoffset: 60;
+    /* stroke-dashoffset: 0; */
+    transition: all .3s linear;
+}
+
+.cbx:checked+.check polyline {
+    stroke-dashoffset: 42;
+    transition: all .2s linear;
+    transition-delay: .15s;
+}
+
+/* Checkbox */
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(3, 227, 122);
+    border-radius: 6px;
+} */
+.main-sidebar,
+.main-sidebar::before {
+    width: 200px;
+}
+
+@media (max-width: 880px){
+    .tbl-responsive {
+        overflow-x: auto;
+    }
+}
+.modal-body::-webkit-scrollbar{
+    width: 7px;
+}
+.modal-body::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 5px;
+    background: rgba(2, 204, 110, 0.74);
+}
+.modal-body::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.btn-secondary,
+.btn-primary {
+    background: rgb(5, 195, 107) !important;
+    color: #fff!important;
+    border: 1px solid rgb(5, 195, 107) !important;
+    border-radius: 30px;
+}
+
+.btn-secondary:hover,
+.btn-primary:hover {
+    background: #fff !important;
+    color: rgb(5, 195, 107)!important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.elevation-4 {
+    box-shadow: 0px 0px 20px 0px #cecbcb !important;
+}
+
+:not(.layout-fixed) .main-sidebar {
+    position: fixed;
+}
+
+/* Main Styling Starts Here */
+.col-head-flex {
+    display: flex;
+    align-items: center;
+}
+
+.inner-col-customer-main {
+    background: #ffffff;
+    height: 100%;
+    padding: 30px;
+    box-shadow: 0px 0px 1px 0px rgb(167, 167, 167);
+}
+
+.calc-col {
+    display: flex;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.cal-bar-1 {
+    height: 140px;
+    width: 40px;
+    background: #eeeeee;
+}
+
+.cal-bar-2 {
+    height: 80px;
+    width: 40px;
+    background: rgb(0, 255, 136);
+    margin-top: 2px;
+}
+
+.cal-bar-1:hover,
+.cal-bar-2:hover {
+    cursor: pointer;
+}
+
+.entity {
+    padding: 12px 24px;
+}
+
+.entity:nth-child(1) {
+    padding-top: 0;
+}
+
+.calc-entity p,
+.calc-entity h3 {
+    margin: 0;
+}
+
+.calc-entity h3 {
+    color: #000000da;
+}
+
+.calc-entity p {
+    color: #00000062;
+    font-size: 14px;
+}
+
+.cal-bar-1-hover-content,
+.cal-bar-2-hover-content {
+    display: none;
+    background: #000000ee;
+    color: #ffffff;
+    position: absolute;
+    left: 15%;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 2s;
+}
+
+.cal-bar-1-hover-content::before,
+.cal-bar-2-hover-content::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -7%;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 12px solid #000000ee;
+    border-bottom: 6px solid transparent;
+}
+
+.cal-bar-1:hover .cal-bar-1-hover-content,
+.cal-bar-2:hover .cal-bar-2-hover-content {
+    display: block;
+    cursor: pointer;
+}
+
+.btn-expenses-main-dropdown {
+    border-radius: 30px;
+    border: 1px solid;
+    font-size: 12px;
+}
+
+.entity-1 {
+    color: #212529;
+}
+
+.entity-1 p {
+    font-size: 14px;
+    color: #00000062;
+}
+
+.col-cash-eq a:hover {
+    background-color: #eee;
+}
+
+.col-cash-eq a {
+    display: flex;
+    color: #000000ab;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.col-cash-eq p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.bank-connect-register {
+    display: flex;
+    margin-top: 200px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.horizontal-bar-flex {
+    padding: 40px 0;
+}
+
+.horizontal-bar-flex-1,
+.horizontal-bar-flex-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.horizontal-bar-flex-1 p,
+.horizontal-bar-flex-1 h6,
+.horizontal-bar-flex-2 p,
+.horizontal-bar-flex-2 h6 {
+    margin: 0;
+}
+
+.horizontal-bar-flex-1 p,
+.horizontal-bar-flex-2 p {
+    font-size: 12px;
+}
+
+.horizontal-bar-1,
+.horizontal-bar-2 {
+    width: 100%;
+    height: 25px;
+}
+
+.horizontal-bar-1 {
+    background-color: rgb(3, 227, 122);
+    margin-bottom: 0px;
+}
+
+.horizontal-bar-2 {
+    background: rgb(4, 142, 78);
+}
+.cbx {
+    display: none!important;
+}
+.horizontal-bar-1-hover-content,
+.horizontal-bar-2-hover-content {
+    display: none;
+    background: #000000c0;
+    color: #ffffff;
+    position: absolute;
+    top: -140%;
+    left: 22%;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 2s;
+}
+
+.horizontal-bar-1-hover-content::before,
+.horizontal-bar-2-hover-content::before {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 2%;
+    width: 0;
+    height: 0;
+    border-top: 14px solid #000000c0;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+}
+
+.horizontal-bar-1:hover .horizontal-bar-1-hover-content,
+.horizontal-bar-2:hover .horizontal-bar-2-hover-content {
+    display: block;
+    cursor: pointer;
+}
+
+.see-all-activity a {
+    font-size: 14px;
+    color: #212529;
+}
+
+.see-all-activity a:hover {
+    color: #007ffd;
+}
+
+.col-bottom-flex {
+    padding: 40px 0px;
+    font-size: 12px;
+}
+
+.footer-links a {
+    padding: 0 4px;
+    color: #212529;
+}
+
+.footer-links a:hover {
+    color: #007ffd;
+}
+
+.add-logo {
+    display: flex;
+    align-items: center;
+}
+.logo-prev {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background: #fff;
+}
+/* Main Styling End */
+
+/* ------------------------------------------------------ */
+
+/* Banking Styling Starts Here */
+.banking-header {
+    padding: 40px 0 10px 0;
+}
+
+.banking-steps {
+    padding: 20px 0;
+}
+
+.banking-steps p {
+    margin-bottom: 0;
+}
+
+.banking-st {
+    font-size: 35px;
+    color: rgb(0, 255, 136);
+    font-weight: bold;
+}
+
+.banking-connect-account {
+    display: flex;
+}
+
+.connect-account-auto,
+.connect-account-manual {
+    padding: 0px 40px;
+}
+
+.connect-account-auto a {
+    padding: 10px 20px;
+    background: rgb(0, 255, 136);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid rgb(0, 255, 136);
+}
+
+.connect-account-manual a {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.connect-account-auto a:hover {
+    background: rgb(2, 143, 77);
+    border-color: rgb(2, 143, 77);
+}
+
+.connect-account-manual a:hover {
+    background: rgb(187, 186, 186);
+    border-color: rgb(187, 186, 186);
+}
+
+.banking-connect-account p {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(112, 111, 111);
+}
+
+.banking-tips-links a {
+    font-size: 14px;
+}
+
+.banking-pane-tab {
+    background: #ffffff;
+    padding: 5px;
+}
+
+select::-webkit-scrollbar {
+    width: 7px !important;
+}
+
+
+
+
+
+
+
+
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background: none;
+    border-radius: 0;
+    padding: 7px 15px;
+    border: 2px solid rgb(5, 195, 107);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-weight: 500;
+    color: rgb(5, 195, 107);
+}
+
+.nav-pills .nav-link:hover {
+    color: rgb(5, 195, 107) !important;
+}
+
+.rules-content {
+    padding: 20px;
+    background: #ffffff;
+}
+
+.rules-notice p,
+.rules-notice a {
+    font-size: 12px;
+}
+
+.rules-notice {
+    padding: 10px;
+    border: 1px solid lightblue;
+}
+
+.rules-batch-drp-btn {
+    padding: 20px 0;
+}
+
+.btn-rules-batch-dropdown {
+    padding: 5px 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 2px solid #212529;
+}
+
+.rules-batch-drp-btn .fa-long-arrow-alt-down {
+    font-size: 22px;
+    vertical-align: baseline;
+    margin-right: 8px;
+}
+
+/* Banking Styling End Here */
+/* Sales Styling Starts Here */
+.all-sale-first-time-display {
+    background: #ffffff;
+    padding: 20px;
+}
+
+.first-sale-col-btn {
+    margin-top: 40px;
+}
+
+.first-sale-col-btn a {
+    color: #fff;
+    background: rgb(5, 195, 107);
+    padding: 10px 20px;
+}
+
+.first-sale-col-btn a:hover {
+    background: rgb(2, 143, 77);
+}
+
+.inovice-create-tip {
+    display: flex;
+    /* align-items: center; */
+    font-size: 15px;
+}
+
+.inovice-create-tip i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.inovice-create-tip p {
+    margin: 0;
+}
+
+.sales-head-main-heading {
+    padding: 20px 0;
+}
+
+.all-sale-diplay-invoice-list {
+    padding: 20px;
+    background: #fff;
+}
+
+.sale-table-btn-flex {
+    display: flex;
+}
+
+.btn-sales-batch-dropdown {
+    padding: 5px 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 2px solid #212529;
+}
+
+.btn-sales-batch-dropdown a {
+    color: #000;
+}
+
+.invoice-total-tr td {
+    border: 0;
+}
+
+.invoice-total-tr:hover {
+    background: #fff !important;
+}
+
+.sales-transactions {
+    background: #ffffff;
+    padding: 20px;
+}
+
+.content-sales-trans-cols-1 {
+    background: rgb(25, 199, 2);
+}
+
+.content-sales-trans-cols-1 p,
+.content-sales-trans-cols-2 p,
+.content-sales-trans-cols-3 p,
+.content-sales-trans-cols-4 p {
+    margin: 0;
+}
+
+.content-sales-trans-cols-2 {
+    background: rgb(2, 177, 221);
+}
+
+.content-sales-trans-cols-3 {
+    background: rgb(0, 200, 226);
+}
+
+.content-sales-trans-cols-4 {
+    background: rgb(255, 103, 1);
+}
+
+.content-sales-trans-cols-1,
+.content-sales-trans-cols-2,
+.content-sales-trans-cols-3,
+.content-sales-trans-cols-4 {
+    padding: 10px;
+    transition: .6s;
+}
+
+.content-sales-trans-cols-1:hover,
+.content-sales-trans-cols-2:hover,
+.content-sales-trans-cols-3:hover,
+.content-sales-trans-cols-4:hover {
+    transform: scale(1.02);
+}
+
+.sales-transactions a {
+    font-size: 12px;
+}
+
+.filter-no {
+    color: #000;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 5px 10px;
+}
+
+.filter-alph {
+    color: #000;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.filter-dots {
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.page-filter-links {
+    font-size: 13px;
+}
+
+.filter-drp select,
+.filter-drp input,
+.filter-drp,
+.filter-drp option {
+    font-size: 12px !important;
+}
+
+.select2-results__option[aria-selected] {
+    font-size: 12px;
+}
+
+table tr {
+    font-size: 14px;
+}
+
+.action-drp a {
+    font-size: 13px;
+}
+
+.hide {
+    display: none;
+}
+
+.dropdown-item {
+    align-items: center;
+}
+
+.dropdown-item label {
+    font-size: 12px;
+    font-weight: 400 !important;
+}
+
+.print i,
+.export-to-excel i,
+.add-tbl-cells i {
+    color: rgb(104, 103, 103);
+    font-size: 18px;
+}
+
+.btn-sales-new-transac {
+    background: rgb(0, 255, 136);
+    border-radius: 30px;
+    color: #fff;
+    padding: 5px 18px;
+}
+
+.transac-drp a {
+    font-size: 14px;
+}
+
+/* .add-tbl-cells {
+    border: 1px solid;
+    padding: 0px 6px!important;
+    border-radius: 30px;
+} */
+/* Sales Styling Ends Here */
+/* Customer */
+.table-btn-nav {
+    border: 1px solid #ced4da;
+    border-left: 0 !important;
+}
+
+.import-customer-drp {
+    border-radius: 20px;
+    border: 1px solid #000;
+    /* margin-left: 10px!important; */
+}
+
+.new-customer-btn {
+    color: #000;
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: .55em 12px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Customer */
+/* Product & Services */
+#products_services {
+    background: #fff;
+    padding: 20px;
+}
+
+.more-inf-btn {
+    border: 1px solid;
+    padding: 6px 26px;
+    border-radius: 30px;
+    color: #000;
+}
+
+.product-head-second .btn-group a {
+    padding: 6px 18px;
+}
+
+.sales-product-edit-head p {
+    margin: 0;
+    padding: 10px;
+}
+
+.edit-upload::-webkit-file-upload-button,
+.journal-import input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.edit-upload,
+.journal-import input {
+    color: transparent;
+    /* width: 120px; */
+}
+
+.edit-upload {
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.journal-import input::before:hover {
+    background: #eee;
+}
+
+.journal-import input::before {
+    /* font-family: "Font Awesome 5 Free"; */
+    content: "Import";
+    padding: 2px 10px;
+    border: 1px solid;
+    text-rendering: auto;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    background: #fff;
+    /* border: 1px solid rgb(201, 201, 201); */
+    border-radius: 3px;
+    color: #000;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.edit-upload::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f044";
+    text-rendering: auto;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    background: #fff;
+    /* border: 1px solid rgb(201, 201, 201); */
+    border-radius: 3px;
+    color: #000;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#uploaded-img {
+    width: 150px;
+    height: 160px;
+    border: 1px solid #eee;
+    padding: 5px;
+    /* border-radius: 100%; */
+}
+
+/* Product & Services */
+/* Employees */
+#employee {
+    padding-top: 40px;
+}
+
+.employee-table-content {
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* Suppliers */
+.unp-paid a {
+    font-size: 12px;
+}
+
+label {
+    font-size: 12px;
+}
+
+.multi-img-preview {
+    max-width: 100%;
+    min-height: 140px;
+    max-height: 100%;
+    background: #eee;
+    border: 1px dotted #000;
+    position: relative;
+}
+
+/* .multi-img-preview::after {
+    content: "Drag Files/Attach Files";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(35%, 40%);
+} */
+
+/* Suppliers */
+/* Expense */
+.dropdown-item {
+    font-size: 14px;
+}
+
+/* Expense */
+/* Invoice */
+.first-half h1 {
+    font-weight: bold;
+}
+
+.first-half h6 {
+    font-size: 15px;
+    color: #cecbcb;
+}
+
+.trow-td td input,
+.trow-td td select {
+    font-size: 13px;
+}
+
+.trow-th th {
+    font-size: 13px;
+}
+
+.trans-footer {
+    background: rgb(34, 34, 34);
+    padding: 30px 0;
+}
+
+.foot-link a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.trans-head {
+    background: rgb(48, 47, 47);
+    color: #fff;
+}
+
+.trans-head h3 {
+    font-weight: bold;
+}
+
+/* Invoice */
+object {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.v-com {
+    overflow-y: hidden;
+}
+
+/* Invoice */
+.select2-results__option {
+    font-size: 13px;
+}
+
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
+    font-size: 13px;
+    /* background: #eee; */
+}
+
+input[type="date"] {
+    font-size: 13px;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    height: 38px;
+}
+
+select {
+    border-radius: 0 !important;
+}
+
+/* span.select2-dropdown.select2-dropdown--below {
+    width: 300px !important;
+} */
+
+/* Tax */
+.tax-display-content {
+    background: #fff;
+    padding: 40px 10px;
+}
+
+.modal-body a {
+    color: #000;
+}
+
+.modal-body a div {
+    padding: 10px;
+}
+
+.modal-body a div:hover {
+    background: #eee !important;
+}
+
+/* Tax */
+/* Report */
+.rep-chart-inner {
+    background: #fff;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid #bdbaba !important;
+}
+
+.card-body .row {
+    font-size: 14px;
+    list-style: none;
+}
+
+.rep-chrt-inner-content {
+    font-size: 14px !important;
+    list-style: none !important;
+}
+
+.ee-hover-effect:hover {
+    background: #eee;
+}
+
+/* Report */
+.btn-clpse {
+    /* text-decoration: underline; */
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.txtedit {
+    display: none;
+}
+
+.rp-list li {
+    /* list-style: none; */
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.rp-list li a {
+    color: #212529;
+}
+
+.rp-list li a:hover {
+    color: rgb(2, 160, 223);
+}
+
+
+.select2-results__options::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.select2-results__options::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Handle */
+.select2-results__options::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    background: rgb(5, 195, 107);
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+
+.select2-results__options::-webkit-scrollbar-thumb:window-inactive {
+    background: rgb(5, 195, 107);
+}
+
+.select2-results__options li:hover {
+    background: #eee;
+    color: #000;
+}
+
+.select2-container--bootstrap4 .select2-results__option--highlighted,
+.select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected=true] {
+    background: #eee;
+    color: #000;
+}
+.bg-white {
+    background: #fff;
+}
+.bg-light{
+    background: #f8f9fa!important;
+}
+.wrapper {
+    margin-top: 60px;
+    background: #f4f6f9;
+}
+.navbar {
+    border: 1px solid #ece9e9;
+}
+#donutChart {
+    height: 100%; 
+    max-width: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+.navbar{
+    padding: 0;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    background: #eee;
+}
+.nav-link{
+    padding: 18px 16px;
+}
+@media screen and (min-width: 992px){
+    #donutChart {
+    min-height: 200px;
+    height: 200px;
+    max-height: 200px;
+    }
+}

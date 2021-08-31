@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | Ledgeraxe</title>
+    <!-- ------------Css----------- -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                    class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sales.html">Sales</a>
+                            <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                            <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expenses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="expense.html">Expenses</a>
+                            <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tax.html">Taxes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="wrapper bg-light">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <div class="add-logo">
+                            <div class="logo-prev">
+                                <img src="" alt="" class="img-fluid">
+                            </div>
+                            <div class="ml-2 cmpny-username">
+                                <h3>Username</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="container">
+                <!--  -->
+                <div class="row">
+                    <!--  -->
+                    <div class="col-lg-6 mb-2">
+                        <div class="inner-col-customer-main">
+                            <div class="col-head-flex">
+                                <h5 class="mr-auto">Income</h5>
+                                <p>Last 356 days</p>
+                            </div>
+
+                            <div class="calc-col">
+                                <div class="cal-bar">
+                                    <div class="cal-bar-1">
+                                        <div class="cal-bar-1-hover-content animated fadeIn">
+                                            <p class="m-0">0</p>
+                                            <p class="m-0" style="color: rgb(0, 255, 136);">Paid Last 30 Days</p>
+                                        </div>
+                                    </div>
+                                    <div class="cal-bar-2">
+                                        <div class="cal-bar-2-hover-content animated fadeIn">
+                                            <p class="m-0">0</p>
+                                            <p class="m-0" style="color: rgb(0, 255, 136);">Paid Last 30 Days</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-entity">
+                                    <div class="entity">
+                                        <h3>PRs0</h3>
+                                        <p class="mt-0">OPEN INVOICES</p>
+                                    </div>
+                                    <div class="entity">
+                                        <h3>PRs0</h3>
+                                        <p class="mt-0">OVERDUE INVOICES</p>
+                                    </div>
+                                    <div class="entity">
+                                        <h3>PRs0</h3>
+                                        <p class="mt-0">PAID LAST 30 DAYS</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="col-lg-6 mb-2">
+                        <div class="inner-col-customer-main">
+                            <div class="col-head-flex">
+                                <h5 class="mr-auto">Profit and Loss</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-expenses-main-dropdown dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Last Month
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Last 30 Days</a>
+                                        <a class="dropdown-item" href="#">This Month</a>
+                                        <a class="dropdown-item" href="#">This Quarter</a>
+                                        <a class="dropdown-item" href="#">This Year</a>
+                                        <a class="dropdown-item" href="#">Last Month</a>
+                                        <a class="dropdown-item" href="#">Last Quarter</a>
+                                        <a class="dropdown-item" href="#">Last Year</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc-entity-1 mt-2">
+                                <a href="">
+                                    <div class="entity-1">
+                                        <h3 class="m-0">PRs0</h3>
+                                        <p class="m-0">NET INCOME FOR DECEMBER</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="horizontal-bar-flex">
+                                <div class="horizontal-bar-flex-1">
+                                    <div class="col-3">
+                                        <h6>PRs0</h6>
+                                        <p>INCOME</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="horizontal-bar-1">
+                                            <div class="horizontal-bar-1-hover-content animated fadeIn">
+                                                <p class="m-0">0</p>
+                                                <p class="m-0" style="color: rgb(0, 255, 136);">Paid Last 30 Days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="horizontal-bar-flex-2">
+                                    <div class="col-3">
+                                        <h6>PRs0</h6>
+                                        <p>INCOME</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="horizontal-bar-2">
+                                            <div class="horizontal-bar-2-hover-content animated fadeIn">
+                                                <p class="m-0">0</p>
+                                                <p class="m-0" style="color: rgb(0, 255, 136);">Paid Last 30 Days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-lg-4 mb-2">
+                        <div class="inner-col-customer-main">
+                            <div class="col-head-flex">
+                                <h5 class="mr-auto">Expenses</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-expenses-main-dropdown dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Last Month
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Last 30 Days</a>
+                                        <a class="dropdown-item" href="#">This Month</a>
+                                        <a class="dropdown-item" href="#">This Quarter</a>
+                                        <a class="dropdown-item" href="#">This Year</a>
+                                        <a class="dropdown-item" href="#">Last Month</a>
+                                        <a class="dropdown-item" href="#">Last Quarter</a>
+                                        <a class="dropdown-item" href="#">Last Year</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc-entity-1 mt-2">
+                                <div class="entity-1">
+                                    <h3 class="m-0">PRs0</h3>
+                                    <p class="m-0">LAST MONTH</p>
+                                </div>
+                            </div>
+                            <div class="col-main-donut-chart-inner mt-2">
+                                <canvas id="donutChart"
+                                    style="min-height: 200px; height: 200px; max-height: 200px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-lg-4 mb-2">
+                        <div class="inner-col-customer-main">
+                            <div class="col-head-flex">
+                                <h5 class="mr-auto">Bank accounts</h5>
+                            </div>
+                            <div class="col-cash-eq">
+                                <a href="">
+                                    <div class="col-6 text-left">
+                                        <p>Cash and cash equivalents In Ledgeraxe</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p>PRs 0</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="m-0">
+                            <div class="bank-connect-register">
+                                <div class="col-6">
+                                    <a href="">Connected Accounts</a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <div class="dropdown">
+                                        <button class="btn btn-expenses-main-dropdown dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Last Month
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Cash and cash equivalents</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-2">
+                        <div class="inner-col-customer-main">
+                            <div class="col-head-flex">
+                                <h5 class="mr-auto">Sales</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-expenses-main-dropdown dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Last Month
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Last 30 Days</a>
+                                        <a class="dropdown-item" href="#">This Month</a>
+                                        <a class="dropdown-item" href="#">This Quarter</a>
+                                        <a class="dropdown-item" href="#">This Year</a>
+                                        <a class="dropdown-item" href="#">Last Month</a>
+                                        <a class="dropdown-item" href="#">Last Quarter</a>
+                                        <a class="dropdown-item" href="#">Last Year</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc-entity-1 mt-2">
+                                <a href="">
+                                    <div class="entity-1">
+                                        <h3 class="m-0">PRs0</h3>
+                                        <p class="m-0">NET INCOME FOR DECEMBER</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="main-line-chart">
+                                <div id="line-chart" style="height: 250px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="see-all-activity text-right">
+                    <a href="">see-all-activity</a>
+                </div>
+                <hr>
+                <footer>
+                    <div class="col-bottom-flex row">
+                        <div class="col-md-6">
+                            &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="footer-links">
+                                <a href="">Privacy</a>
+                                <a href="">Security</a>
+                                <a href="">Terms Of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!--  -->
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- ----------Scripts---------- -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        //- DONUT CHART -
+        //-------------
+        // Get context with jQuery - using jQuery's .get() method.
+        var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+        var donutData = {
+            labels: [
+                'Chrome',
+                'IE',
+                'FireFox'
+            ],
+            datasets: [{
+                data: [40, 200, 200],
+                backgroundColor: ['rgb(3, 227, 122)', 'rgb(2, 165, 89)', 'rgb(4, 142, 78)', '#00c0ef',
+                    '#3c8dbc', '#d2d6de'
+                ],
+            }]
+        }
+        var donutOptions = {
+            cutoutPercentage: 68,
+            maintainAspectRatio: true,
+            responsive: true,
+        }
+        //Create pie or douhnut chart
+        // You can switch between pie and douhnut using the method below.
+        var donutChart = new Chart(donutChartCanvas, {
+            type: 'doughnut',
+            data: donutData,
+            options: donutOptions
+        })
+
+        //-------------
+
+        // LINE CHART
+        // ----------
+        //
+        //LINE randomly generated data
+
+        var sin = [],
+            cos = []
+        for (var i = 0; i < 14; i += 1) {
+            sin.push([i, Math.sin(i)])
+        }
+        var line_data1 = {
+            data: sin,
+            color: '#3c8dbc'
+        }
+        var line_data2 = {
+            data: cos,
+            color: '#00c0ef'
+        }
+        $.plot('#line-chart', [line_data1], {
+            grid: {
+                hoverable: true,
+                borderColor: '#f3f3f3',
+                borderWidth: 1,
+                tickColor: '#f3f3f3'
+            },
+            series: {
+                shadowSize: 0,
+                lines: {
+                    show: true
+                },
+                points: {
+                    show: true
+                }
+            },
+            lines: {
+                fill: false,
+                color: ['#3c8dbc', '#f56954']
+            },
+            yaxis: {
+                show: true
+            },
+            xaxis: {
+                show: true
+            }
+        })
+        //Initialize tooltip on hover
+        $('<div class="tooltip-inner" id="line-chart-tooltip"></div>').css({
+            position: 'absolute',
+            display: 'none',
+            opacity: 0.8
+        }).appendTo('body')
+        $('#line-chart').bind('plothover', function (event, pos, item) {
+
+            if (item) {
+                var x = item.datapoint[0].toFixed(2),
+                    y = item.datapoint[1].toFixed(2)
+
+                $('#line-chart-tooltip').html(item.series.label + ' of ' + x + ' = ' + y)
+                    .css({
+                        top: item.pageY + 5,
+                        left: item.pageX + 5
+                    })
+                    .fadeIn(200)
+            } else {
+                $('#line-chart-tooltip').hide()
+            }
+
+        })
+        /* END LINE CHART */
+    </script>
+    <!-- ----------Scripts---------- -->
+</body>
+
+</html>

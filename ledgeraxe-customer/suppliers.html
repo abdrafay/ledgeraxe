@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | Ledgeraxe</title>
+    <!-- ------------Css----------- -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customer-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------Css----------- -->
+</head>
+
+<body>
+ <!-- Modal -->
+ <div class="modal fade new-supplier" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Employee Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              <!-- Form -->
+              <form action="">
+                <div class="row m-0">
+                    <div class="col-md-6">
+                        <div class="row m-0">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Title</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Middle Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Suffix</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Comapany</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Display Name As</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                            <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Address</label>
+                                <textarea name="" id="" class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">City/Town</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">State/Province</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Postal Code</label>
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Country</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Notes</label>
+                                <textarea name="" id="" rows="2" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row m-0">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Phone</label>
+                                    <input type="number" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Mobile</label>
+                                    <input type="number" class="form-control" name="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Fax</label>
+                                    <input type="number" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Other</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Website</label>
+                                    <input type="url" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Account No</label>
+                                    <input type="number" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Business ID No</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Attachment</label><br>
+                                    <input type="file" class="multi-file-uploader pb-1" multiple name="">
+                                    <div class="multi-img-preview"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Form -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/logo/logo.png" width="60" height="50" alt=""
+                class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sales
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="sales.html">Sales</a>
+                        <a class="dropdown-item" href="sales_customer.html">Customers</a>
+                        <a class="dropdown-item" href="products_services.html">Products & Services</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Expenses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="expense.html">Expenses</a>
+                        <a class="dropdown-item" href="suppliers.html">Suppliers</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="employee.html">Employees</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="report.html">Reports</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tax.html">Taxes</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="chartofaccounts.html">Accounting</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="wrapper">
+        <!-- Content Header (Page header) -->
+        
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="all-sale-diplay-invoice-list">
+                    <!-- Display When First Invoice Created -->
+                    <div class="sales-transactions">
+                        <div class="sales-trans-main-heading row m-0 align-items-center">
+                            <div class="transac-heading">
+                            <h4>Suppliers</h4>
+                        </div>
+                        <div class="transac-drp ml-auto">
+                            <div class="btn-group align-items-center">
+                                <a href="" class="new-customer-btn" data-toggle="modal" data-target=".new-supplier">New Supplier</a>
+                                <button type="button" class="btn dropdown-toggle import-customer-drp" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" type="button">Import Customer</a>
+                                </div>
+                              </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 pb-4 unp-paid">
+                        <div class="col-md-6">
+                            <a href="">Unpaid Last 365 Days</a>
+                            <div class="inner-sales-trans-cols row">
+                                <div class="col-md-6 p-0">
+                                    <div class="content-sales-trans-cols-2 mr-auto">
+                                        <p>PRs0</p>
+                                        <p style="font-size: 12px;">0 OVERDUE</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-0">
+                                    <div class="content-sales-trans-cols-3 ml-auto">
+                                        <p>PRs0</p>
+                                        <p style="font-size: 12px;">0 OPEN BILL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="inner-sales-trans-cols">
+                                <a href="">Paid</a>
+                                <div class="content-sales-trans-cols-4">
+                                    <p>PRs0</p>
+                                    <p style="font-size: 12px;">0 PAID LAST 30 DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sale-table-btn-flex pb-2 align-items-center">
+                        <div class="dropdown">
+                            <i class="fas fa-long-arrow-alt-down ml-3 mr-2"></i><button
+                                class="btn btn-sales-batch-dropdown dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Batch Actions
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Email</a>
+                                <a class="dropdown-item" href="#">Pay bills Online</a>
+                                <a class="dropdown-item" href="#">Make Inactive</a>                                
+                            </div>
+                        </div>
+                        <div class="table-search-bar">
+                            <form class="form-inline ml-3">
+                                <div class="input-group input-group-sm">
+                                    <input class="form-control form-control-table" type="search" placeholder="Search" aria-label="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar table-btn-nav" type="submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row m-0 ml-auto align-items-center">
+                            <div class="print pr-3">
+                                <a href="">
+                                    <i class="fas fa-print"></i>
+                                </a>
+                            </div>
+                        <div class="export-to-excel">
+                            <a href="">
+                            <i class="fas fa-file-export"></i>
+                        </a>
+                        </div>
+                    </div>
+
+                    </div>
+                    <table class="table table-bordered table-hover table-sm" id="checkbox-add" style="border: 0;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="text-center">
+                                    <input type="checkbox" class="cbx tbl-filter" name="" id="slct-all" onclick="toggle(this)" style="display: none;">
+                                    <label for="slct-all" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                </th>
+                                <th>Supplier / Company</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                                <th >Email</th>
+                                <th>Attachments</th>
+                                <th>Open Balance</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"> 
+                                    <input type="checkbox" class="cbx tbl-filter" name="" id="slct-all" style="display: none;">
+                                    <label for="slct-all" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path
+                                                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                            </path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                </td>
+                                <td><a href="">abc</a></td>
+                                <td class="">Example, Karachi</td>
+                                <td class="">0332222222</td>
+                                <td class="">zainrafay12@gmail.com</td>
+                                <td class=""></td>
+                                <td>PRs5051.00</td>
+                                <td class="row m-0 align-items-center"><a href="cr-expense.html">Create Expense</a>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                                            data-display="static" aria-haspopup="true" aria-expanded="false">
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right drop-up action-drp">
+                                            <a href="cr-cheque.html" class="dropdown-item">Write Cheque</a>
+                                            <a href="" class="dropdown-item">Make Inactive</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="page-filtering">
+                        <div class="row">
+                            <ul class="pagination pagination-sm ml-auto">
+                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- All Sale Display Invoice List -->
+                <footer>
+                    <div class="col-bottom-flex row">
+                        <div class="col-md-6 pl-4">
+                            &copy; 2020 Ledgeraxe All rights reserved Powered By <a href="">Pixus Technology</a>
+                        </div>
+                        <div class="col-md-6 text-right pr-4">
+                            <div class="footer-links">
+                                <a href="">Privacy</a>
+                                <a href="">Security</a>
+                                <a href="">Terms Of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div><!-- Container -->
+            
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scripts -->
+</body>
+
+</html>
